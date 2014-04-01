@@ -2,47 +2,50 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Casas</title>
+	<meta name="description" content="El hogar de los inmuebles">
+	<title>Pulse | Inmuebles</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='http://fonts.googleapis.com/css?family=Elsie:400,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header>
-		<nav id="menu">
+	<header>	
+		<figure id="logo">
+			<a href=""><img src="images/logo.png"/></a>
+		</figure>	
+
+		<h1>Pulse: El hogar de los inmuebles</h1>
+
+		<figure id="user">
+			<a href="#"><img src="images/user.png" alt="Admin"></a>
+		</figure>
+	</header>
+
+		<nav>
 			<ul>
+
 				<li>
-					<figure>
-						<img src="images/logo.png"/>
-					</figure>	
+					<a href="#">Inicio</a>
 				</li>
 
 				<li>
-					<h1>Pulse</h1>
+					<a href="#">Noticias</a>
+					
 				</li>
 
 				<li>
-					<figure id="user">
-						<img src="images/user.jpg" alt="Admin">
-					</figure>
+				<!-- se puede usar <li id ="propiedades">  para destacar  -->
+					<a href="#">Propiedades</a>
+					
 				</li>
 
 				<li>
-					Inicio
-				</li>
-
-				<li>
-					Noticias
-				</li>
-
-				<li>
-					Propiedades
-				</li>
-
-				<li>
-					Contacto
+					<a href="#">Contacto</a>
+					
 				</li>
 			</ul>
 
 		</nav>
-	</header>
 
 <!-- 	<div id="buscador">
 
@@ -51,7 +54,7 @@
 		
 	</div> -->
 	<section id="hot_item">
-		<nav id="menu_item">
+		<div id="menu_item">
 			<ul>
 				<li>DF</li>
 				<li>Querétaro</li>
@@ -59,7 +62,7 @@
 				<li>Pachuca</li>
 				<li>Edo.Mex</li>
 			</ul>
-		</nav>
+		</div>
 		<article>
 			<h2 class="titulo_item">
 				<a href="#">Título casa</a>
@@ -69,6 +72,11 @@
 			</p>
 		</article>
 	</section>
+	<!-- <section id="noticias">
+		<article class="post">
+			
+		</article>
+	</section> -->
 	<footer>
 		<p>
 			<strong>Pulse 2014</strong>

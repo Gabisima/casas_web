@@ -9,43 +9,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Elsie:400,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header>	
-		<figure id="logo">
-			<a href=""><img src="images/logo.png"/></a>
-		</figure>	
-
-		<h1>Pulse: El hogar de los inmuebles</h1>
-
-		<figure id="user">
-			<a href="#"><img src="images/user.png" alt="Admin"></a>
-		</figure>
-	</header>
-
-		<nav>
-			<ul>
-
-				<li>
-					<a href="#">Inicio</a>
-				</li>
-
-				<li>
-					<a href="#">Noticias</a>
-					
-				</li>
-
-				<li>
-				<!-- se puede usar <li id ="propiedades">  para destacar  -->
-					<a href="#">Propiedades</a>
-					
-				</li>
-
-				<li>
-					<a href="#">Contacto</a>
-					
-				</li>
-			</ul>
-
-		</nav>
+	<!-- header -->
+	<?php include ("header.php"); ?>
+	<!-- header -->
 
 <!-- 	<div id="buscador">
 	</div>

@@ -48,11 +48,11 @@
 		</nav>
 
 <!-- 	<div id="buscador">
-
 	</div>
 	<div id="slider">
 		
 	</div> -->
+
 	<section id="hot_item">
 		<div id="menu_item">
 			<ul>

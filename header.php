@@ -7,19 +7,14 @@
 			<a href=""><img src="images/logo.png"/></a>
 		</figure>	
 
-		<h1>Pulse: El hogar de los inmuebles</h1>
-
-		<figure id="user">
-			<a href="#"><img src="images/user.png" alt="Admin"></a>
-		</figure>
-	</header>
+		<!-- <h1>El hogar de los inmuebles</h1> -->
 
 		<nav>
 			<ul>
 
-				<li>
+				<!-- <li>
 					<a href="#">Inicio</a>
-				</li>
+				</li> -->
 
 				<li>
 					<a href="#">Noticias</a>
@@ -39,3 +34,7 @@
 			</ul>
 
 		</nav>
+		<figure id="user">
+			<a href="#"><img src="images/user.png" alt="Admin"></a>
+		</figure>
+	</header>

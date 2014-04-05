@@ -12,32 +12,63 @@
 	<!-- header -->
 	<?php include ("header.php"); ?>
 	<!-- header -->
+	<from action="#" method="post">
+		<div id="buscador">
+			<label for="fbuscar" id="fbuscar">Buscar</label>
+			<input name="buscar" type="text" id="buscar" required>
+			<a onclick="javascript:getElementById('formulario').submit();" href="#"><img src="images/search.png" alt="submit" /></a>
 
-<!-- 	<div id="buscador">
-	</div>
-	<div id="slider">
-		
-	</div> -->
-
-	<section id="hot_item">
-		<div id="menu_item">
-			<ul>
-				<li>DF</li>
-				<li>Querétaro</li>
-				<li>Monterrey</li>
-				<li>Pachuca</li>
-				<li>Edo.Mex</li>
-			</ul>
 		</div>
-		<article>
-			<h2 class="titulo_item">
-				<a href="#">Título casa</a>
-			</h2>
-			<p class="precio_item">
-				$500,000
-			</p>
-		</article>
-	</section>
+	</form>
+<!-- 	<div id="slider">
+		
+	</div>
+ -->
+	<!-- Inmuebles recientes -->
+	<!-- menu inmuebles recientes -->
+	<!-- <div class="tabs">
+		<ul>
+			<li><a href="#" id="active">DF</a></li>
+			<li><a href="#">Querétaro</a></li>
+			<li><a href="#">Monterrey</a></li>
+			<li><a href="#">Pachuca</a></li>
+			<li><a href="#">Edo. Mex</a></li>
+		</ul>
+	</div> -->
+	<!-- menu inmuebles recientes -->
+	 <!--  <div class="recientes-container">
+	    <div class="recientes-wrapper">
+	      <div class="recientes-slide">
+	        <div class="contenedor-slide">
+	          <h2>Inmuebles DF</h2>
+	          <div class="inmueble">
+	          <figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
+	          <p class="colonia">Titulo</p>
+	          <p class="precio">$500000</p>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="recientes-slide">
+	        <div class="content-slide">
+	          <h2>Inmuebles Querétaro</h2>
+	          <div class="inmueble">
+	          <figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
+	          <div class="colonia_item">Titulo</div>
+	          <div class="precio_item">$500000</div>
+	        </div>
+	      </div>
+	      <div class="recientes-slide">
+	        <div class="content-slide">
+	          <h2>Inmuebles Monterrey</h2>
+				<div class="inmueble">
+	          	<figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
+	          <p class="colonia">Titulo</p>
+	          <p class="precio">$500000</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div> -->
+	
 	<!-- <section id="noticias">
 		<article class="post">
 			

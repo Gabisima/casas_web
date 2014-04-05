@@ -16,10 +16,14 @@
 	<!-- buscador -->
 	<?php include ("buscador.php"); ?>
 	<!-- buscador -->
-<!-- 	<div id="slider">
+
+	<!-- slider -->
+	<div id="slider">
+		
 		
 	</div>
- -->
+	<!-- slider -->
+
 	<!-- Inmuebles recientes -->
 	<!-- menu inmuebles recientes -->
 	<!-- <div class="tabs">

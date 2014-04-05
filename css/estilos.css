@@ -145,6 +145,7 @@ nav ul li a{
 
 #buscador a img{
 	/*border-radius: 50px;*/
+	display: inline-block;
 	margin: 0.2em .5em 0.2em 0.2em;
 	position: absolute;
 	right: 0;
@@ -160,7 +161,7 @@ nav ul li a{
 #buscar{
 	
 	margin: .5em 0 0.5em 1em;
-	padding: .2em 18em 0.2em 0;
+	padding: .2em 45% 0.2em 0;
 	/*border-radius: 0.5em;*/
 }
 

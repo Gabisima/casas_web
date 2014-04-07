@@ -46,9 +46,9 @@ header #user{
 
 }
 header #user img{
-	border-left: 1px solid white;
-	margin-left: 0.5em;
-	padding-left: 0.5em;
+	margin-left: 1em;
+	display: inline-block;
+	position: relative;
 	width: 50px;
 
 }
@@ -62,9 +62,7 @@ header #logo img{
 }
 
 nav{
-	
-	/*background: #57AB7D;*/
-	/*box-shadow: rgba(0,0,0,0.5) 1px 1px 4px;*/
+
 	margin 0;
 }
 
@@ -85,7 +83,7 @@ nav ul #propiedades{
 nav ul li{
 
 	display: inline-block;
-	margin: 0.7em 1.5em 0 1.5em;
+	margin: 0.7em 0.5em 0 0;
 }
 nav ul li a{
 
@@ -136,6 +134,7 @@ nav ul li a{
 }
 
 #buscador{
+
 	display: block;
 	background: #D6CCBD;
 	padding: 0 0 0.2em 0;
@@ -144,6 +143,7 @@ nav ul li a{
 }
 
 #buscador a img{
+
 	/*border-radius: 50px;*/
 	display: inline-block;
 	margin: 0.2em .5em 0.2em 0.2em;
@@ -155,14 +155,14 @@ nav ul li a{
 	
 	display: inline-block;
 	font-size: 1.3em;
-	margin: .1em 0 0 1em; 
+	margin: .1em 0 0 0.5em; 
 }
 
 #buscar{
 	
-	margin: .5em 0 0.5em 1em;
-	padding: .2em 45% 0.2em 0;
+	margin: .5em 0 0.2em 1em;
+	padding: .2em 1em 0.2em 0;
 	/*border-radius: 0.5em;*/
 }
 
-
+/*Slider*/

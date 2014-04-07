@@ -3,10 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="El hogar de los inmuebles">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
+
 	<title>Pulse | Inmuebles</title>
+
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href='http://fonts.googleapis.com/css?family=Elsie:400,900' rel='stylesheet' type='text/css'>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="jquery.flexslider.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -18,56 +24,22 @@
 	<!-- buscador -->
 
 	<!-- slider -->
-	<div id="slider">
-		
-		
+		<div class="flexslider">
+	  <ul class="slides">
+	    <li>
+	      <img src="slide1.jpg" />
+	    </li>
+	    <li>
+	      <img src="slide2.jpg" />
+	    </li>
+	    <li>
+	      <img src="slide3.jpg" />
+	    </li>
+	  </ul>
 	</div>
+	 
 	<!-- slider -->
 
-	<!-- Inmuebles recientes -->
-	<!-- menu inmuebles recientes -->
-	<!-- <div class="tabs">
-		<ul>
-			<li><a href="#" id="active">DF</a></li>
-			<li><a href="#">Querétaro</a></li>
-			<li><a href="#">Monterrey</a></li>
-			<li><a href="#">Pachuca</a></li>
-			<li><a href="#">Edo. Mex</a></li>
-		</ul>
-	</div> -->
-	<!-- menu inmuebles recientes -->
-	 <!--  <div class="recientes-container">
-	    <div class="recientes-wrapper">
-	      <div class="recientes-slide">
-	        <div class="contenedor-slide">
-	          <h2>Inmuebles DF</h2>
-	          <div class="inmueble">
-	          <figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
-	          <p class="colonia">Titulo</p>
-	          <p class="precio">$500000</p>
-	          </div>
-	        </div>
-	      </div>
-	      <div class="recientes-slide">
-	        <div class="content-slide">
-	          <h2>Inmuebles Querétaro</h2>
-	          <div class="inmueble">
-	          <figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
-	          <div class="colonia_item">Titulo</div>
-	          <div class="precio_item">$500000</div>
-	        </div>
-	      </div>
-	      <div class="recientes-slide">
-	        <div class="content-slide">
-	          <h2>Inmuebles Monterrey</h2>
-				<div class="inmueble">
-	          	<figure><img src="images/inmuebles/casa2.jpg" alt=""></figure>
-	          <p class="colonia">Titulo</p>
-	          <p class="precio">$500000</p>
-	        </div>
-	      </div>
-	    </div>
-	  </div> -->
 	
 	<!-- <section id="noticias">
 		<article class="post">
@@ -79,5 +51,6 @@
 			<strong>Pulse 2014</strong>
 		</p>
 	</footer>
+	
 </body>
 </html>

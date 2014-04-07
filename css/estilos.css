@@ -166,3 +166,55 @@ nav ul li a{
 }
 
 /*Slider*/
+
+.slider{
+	
+	margin: .6em .2em 0 .2em;
+}
+
+.titulo
+{
+	margin: 0;
+}
+
+#slides {
+
+    display: none
+}
+
+
+#slides .slidesjs-navigation {
+  margin-top:3px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(/img/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}

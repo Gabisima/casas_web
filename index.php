@@ -6,40 +6,57 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 
 	<title>Pulse | Inmuebles</title>
-
+	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
-	<link href='http://fonts.googleapis.com/css?family=Elsie:400,900' rel='stylesheet' type='text/css'>
+	<!-- end estilos generales -->
 
+	<!-- start fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Elsie:400,900' rel='stylesheet' type='text/css'>
+	<!-- end fonts -->
+	
+	<!-- start jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="jquery.flexslider.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  	<script src="jquery.slides.min.js"></script>
+  	<!-- end jquery -->
+
+	<!-- inicializar el slider -->
+  	<script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+  </script>
+  <!-- terminar inicializar slider -->
+
 </head>
 <body>
-	<!-- header -->
+	<!--start header -->
 	<?php include ("header.php"); ?>
-	<!-- header -->
+	<!--end header -->
 
-	<!-- buscador -->
+	<!--start buscador -->
 	<?php include ("buscador.php"); ?>
-	<!-- buscador -->
+	<!--end buscador -->
 
-	<!-- slider -->
-		<div class="flexslider">
-	  <ul class="slides">
-	    <li>
-	      <img src="slide1.jpg" />
-	    </li>
-	    <li>
-	      <img src="slide2.jpg" />
-	    </li>
-	    <li>
-	      <img src="slide3.jpg" />
-	    </li>
-	  </ul>
-	</div>
-	 
-	<!-- slider -->
+	<!--start slider -->
+ 	<div class="slider">
+ 		<h2 class="titulo">Nuevas</h2>
+ 		<div class="container">
+	    	<div id="slides">
+		      
+		      <img src="images/inmuebles/casa2.jpg" alt="">
+		      <img src="images/inmuebles/elcristo.jpg" alt="">
+		      
+	    	</div>
+  		</div>
 
+ 	</div>
+	
+	<!--end slider -->
 	
 	<!-- <section id="noticias">
 		<article class="post">
@@ -52,5 +69,25 @@
 		</p>
 	</footer>
 	
+<!-- scripts -->
+<!-- SlidesJS Required: Link to jQuery -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Link to jquery.slides.js -->
+  <script src="js/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+  </script>
+ <!-- End SlidesJS Required -->
+<!-- end scripts -->
 </body>
 </html>

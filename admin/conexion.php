@@ -1,0 +1,6 @@
+<?php
+	mysql_connect("localhost","root","")
+	or die("Connection Failed");
+	mysql_select_db("bienesraices")
+	or die("There is no data base");
+?>

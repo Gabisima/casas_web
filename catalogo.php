@@ -15,26 +15,39 @@
 	<!-- buscador -->
 	<?php include ("buscador.php"); ?>
 	<!-- slider -->
-	<?php include ("slider.php"); ? >	
+	<?php include ("slider.php"); ?>	
 
 	<h1> CATALOGO DE PROPIEDADES </h1>
-	<table>
 	<?php 
   	$c = @$_POST['buscar'];
   	$sql = @mysql_query("SELECT * FROM inmuebles");
 	while ($row = mysql_fetch_object($sql))
 	{
 	?>
-	  <tr>
-	    <td><img src="images/<?php echo $row->foto1; ?>" height="50" width="50"></td>
-	   	<td><table>
-	    	<tr><td><?php echo $row->nombre;?></td></tr>
-	    	<tr><td><?php echo $row->tipo;?></td></tr>
-	    	<tr><td><?php echo $row->localidad;?></td></tr>
-        	<tr><td><?php echo $row->superficie;?></td></tr>
-        	<tr><td><?php echo $row->precio;?></td></tr>           
-  	  	</td></table>
-      </tr>
+<section id="contenido">
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/<?php echo $row->foto1; ?>" height="50" width="50">
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					<?php echo $row->nombre;?>
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				<?php echo $row->localidad;?>
+			</div>
+			
+			<div class="precio_item">
+				$ <?php echo $row->precio;?>
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+			</div>
+
+		</article> 		
 <?php 	} ?>
 </table>
 <footer>

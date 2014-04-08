@@ -95,7 +95,7 @@
   	
 	while ($row = mysql_fetch_object($sql))
 	{  
-		// echo $i++
+		$i++
 	?>	
 		<?php if ($i<=6) {	
 		?>

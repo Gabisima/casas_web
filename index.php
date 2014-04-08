@@ -16,20 +16,39 @@
 	<!-- end fonts -->
 	
 	<!-- start jquery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  	<script src="jquery.slides.min.js"></script>
+
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	 
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="css/owl.theme.css">
+	 
+	<!--  jQuery 1.7+  -->
+	<script src="js/jquery-1.9.1.min.js"></script>
+	 
+	<!-- Include js plugin -->
+	<script src="js/owl.carousel.js"></script>
   	<!-- end jquery -->
 
 	<!-- inicializar el slider -->
+
   	<script>
-    $(function(){
-      $("#slides").slidesjs({
-        width: 940,
-        height: 528
-      });
-    });
-  </script>
+
+  		$(document).ready(function() {
+ 
+	  		$("#owl-demo").owlCarousel({
+	 
+		      autoPlay: 3000, //Set AutoPlay to 3 seconds
+		 
+		      items : 4,
+		      itemsDesktop : [1199,3],
+		      itemsDesktopSmall : [979,3]
+ 
+ 			});
+ 
+		});
+  	</script>
+
   <!-- terminar inicializar slider -->
 
 </head>
@@ -43,40 +62,45 @@
 	<!--end buscador -->
 
 	<!--start slider -->
- 	<div class="slider">
- 		<h2 class="titulo">Nuevas</h2>
- 		<div class="container">
-	    	<div id="slides">
-		      
-		      <img src="images/inmuebles/casa2.jpg" alt="">
-		      <img src="images/inmuebles/elcristo.jpg" alt="">
-		      
-	    	</div>
-  		</div>
-
- 	</div>
+	
+	<div id="owl-demo">
+          
+	  <div class="item"><a href="#"><img src="images/inmuebles/casa2.jpg" alt=""></a></div>
+	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
+	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
+	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
+	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
+	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
+	  <div class="item"><img src="images/inmuebles/villascampo.jpg" alt=""></div>
+	
+	</div>
 	
 	<!--end slider -->
 	
 	<!-- start recientes -->
 	
-	<div class="contenedor_lista">
-		<div class="contendor_caja">
-			<figure><img src="images/inmuebles/casa2.jpg" width="120px" height="100px" alt=""></figure>
-			<h2 class="contenedor_titulo">
-				Casa sustentable la virgen
+	<section id="contenido">
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/imagen.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
 			</h2>
 
-			<div class="contenedor_estado">
-				Edo. Mex
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio">
+				$4,000,000.00 MXN
 			</div>
 
-			<div class="contenedor_descripcion">
-				Casa sustentable bonita en zona residencial la virge porque YOLO
-			</div>
-		</div>
+		</article>
 
-	</div>
+	</section>
 
 	<!-- end recientes -->
 	<footer>
@@ -86,24 +110,8 @@
 	</footer>
 	
 <!-- scripts -->
-<!-- SlidesJS Required: Link to jQuery -->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="js/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528
-      });
-    });
-  </script>
- <!-- End SlidesJS Required -->
 <!-- end scripts -->
 </body>
 </html>

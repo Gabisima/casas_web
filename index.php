@@ -1,17 +1,10 @@
 <!doctype html>
 <html lang="es">
 <head>
-
-	<?php
-		//Conectar a la base de datos
-		$i = 1;
-		include "conexion.php"; 
-
-	?>
 	<meta charset="UTF-8">
 	<meta name="description" content="El hogar de los inmuebles">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
-	
+
 	<title>Pulse | Inmuebles</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -72,59 +65,114 @@
 	<!--start slider -->
 	
 	<div id="owl-demo">
-	<?php 
-	  	$c = @$_POST['buscar'];
-	  	$sql = @mysql_query("SELECT * FROM inmuebles order by id desc");
-		while ($row = mysql_fetch_object($sql))
-		{ ?>
-			<?php if ($i<=6) { ?>
           
-	  			<div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" alt=""></a></div>
-	  		<?php } ?>	
+	  <div class="item"><a href="#"><img src="images/inmuebles/casa2.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/villascampo.jpg" alt=""></a></div>
 	
-	<?php } ?>
 	</div>
+	
 	<!--end slider -->
 	
 	<!-- start recientes -->
 	
 	<section id="contenido">
-	<?php 
-  	$c = @$_POST['buscar'];
-  	$sql = @mysql_query("SELECT * FROM inmuebles order by id desc");
-  	
-	while ($row = mysql_fetch_object($sql))
-	{  
-		// echo $i++
-	?>	
-		<?php if ($i<=6) {	
-		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" /></a>
+				<img src="images/inmuebles/elcristo.jpg" />
 			</figure>
 			<h2 class="titulo_item">
-				<a href="propiedad.php?id=<?php echo $row->id;?>">
-					<?php echo $row->titulo;?>
+				<a href="#">
+					Me urge, casa bonita, la virgen
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				<?php echo $row->localidad;?>
+				Edo.Mex
 			</div>
 			
 			<div class="precio_item">
-				$<?php echo $row->precio;?> <?php echo $row->unidad;?>
+				$4,000,000.00 MXN
 			</div>
 
 			<div class="datos_item">
-				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+				<a href="#" class="tipo">Casa</a>
 			</div>
 
 		</article>
-		<?php }?>
-	<?php } ?>
-		
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
 
 	</section>
 

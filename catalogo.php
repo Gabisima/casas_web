@@ -14,8 +14,6 @@
 	<?php include ("header.php"); ?>
 	<!-- buscador -->
 	<?php include ("buscador.php"); ?>
-	<!-- slider -->
-	<!--?php //include ("slider.php"); ?-->	
 
 	<h1> CATALOGO DE PROPIEDADES </h1>
 	<?php 

@@ -66,12 +66,12 @@
 	<div id="owl-demo">
           
 	  <div class="item"><a href="#"><img src="images/inmuebles/casa2.jpg" alt=""></a></div>
-	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
-	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
-	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
-	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
-	  <div class="item"><img src="images/inmuebles/elcristo.jpg" alt=""></div>
-	  <div class="item"><img src="images/inmuebles/villascampo.jpg" alt=""></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/inmuebles/villascampo.jpg" alt=""></a></div>
 	
 	</div>
 	
@@ -82,7 +82,7 @@
 	<section id="contenido">
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/inmuebles/imagen.jpg" />
+				<img src="images/inmuebles/elcristo.jpg" />
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
@@ -94,8 +94,81 @@
 				Edo.Mex
 			</div>
 			
-			<div class="precio">
+			<div class="precio_item">
 				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
+			</div>
+
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="images/inmuebles/elcristo.jpg" />
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">
+					Me urge, casa bonita, la virgen
+				</a>
+			</h2>
+
+			<div class="estado_item">
+				Edo.Mex
+			</div>
+			
+			<div class="precio_item">
+				$4,000,000.00 MXN
+			</div>
+
+			<div class="datos_item">
+				<a href="#" class="tipo">Casa</a>
 			</div>
 
 		</article>

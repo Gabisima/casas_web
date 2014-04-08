@@ -142,11 +142,23 @@ nav ul li a{
 
 	background: white;
 	border-bottom: 3px solid #662C1E;
+	margin-bottom: 1em;
 	overflow: hidden;
+}
+#contenido .item .datos_item{
+	text-align: right;
+}
+#contenido .item .datos_item .tipo{
+	background: #885015;
+	color: white;
+	display: inline-block;
+	margin: 0 .3em .1em 0;
+	padding: 0.5em;
+	text-decoration: none;
 }
 #contenido .item .estado_item{
 
-	
+	color: #aaa;
 }
 #contenido .item .imagen_item{
 
@@ -155,8 +167,9 @@ nav ul li a{
 }
 
 #contenido .item .imagen_item img{
-	
+	margin: 0.2em 0 0 0.2em;
 	width: 96px;
+	height: 125px;
 }
 
 #contenido .item .titulo_item{

@@ -23,7 +23,7 @@
 
 				<li>
 				<!-- se puede usar <li id ="propiedades">  para destacar  -->
-					<a href="#">Propiedades</a>
+					<a href="catalogo.php">Propiedades</a>
 					
 				</li>
 

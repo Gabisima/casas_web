@@ -1,15 +1,21 @@
-<?php
-		//Conectar a la base de datos
-		include "conexion.php"; 
-		mysql_connect("localhost", "root", "") or die ("No hay nada");
-		mysql_select_db("bienesraices") or die ("No hay base");
- ?>
-	<meta charset="utf-8">
+<!doctype html>
+<html>	
+
+<head>
+	<meta http-equiv="Content-Type" content="text.html"; charset="utf-8">
 	<meta name="description" content="El hogar de los inmuebles">
 	<title>Pulse | Inmuebles</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<title> Tienda de Discos </title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+</head>
 
+<?php
+		//Conectar a la base de datos
+		include "conexion.php";
+ ?>
 	<!-- header -->
 	<?php include ("header.php"); ?>
 	<!-- buscador -->
@@ -17,7 +23,6 @@
 
 	<h1> CATALOGO DE PROPIEDADES </h1>
 	<?php 
-  	$c = @$_POST['buscar'];
   	$sql = @mysql_query("SELECT * FROM inmuebles");
 	while ($row = mysql_fetch_object($sql))
 	{
@@ -53,3 +58,4 @@
 			<strong>Pulse 2014</strong>
 		</p>
 </footer>
+</html>

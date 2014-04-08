@@ -83,7 +83,7 @@ nav ul li{
 	margin: 0.7em 0.5em 0 0;
 }
 nav ul li a{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	color: white;
 	display: block;
 	padding: 0.3em 0;
@@ -122,6 +122,7 @@ nav ul li a{
 
 
 .tabs ul li a{
+	font-family: 'Ubuntu Condensed', sans-serif;
 	color: white;
 	text-decoration: none;
 }
@@ -145,28 +146,31 @@ nav ul li a{
 }
 
 #contenido .descripcion .titulo_descripcion{
-	
+	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 1.4em;
 	padding: 0.5em 0 0 0.2em;
 	color: #583400;
 }
 
 #contenido .descripcion .contenido_descripcion{
+	font-family: 'Ubuntu Condensed', sans-serif;
 	text-align: left;
 	padding: 0 0 0.3em 2em;
 }
 
 #contenido .item{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	background: white;
 	border-bottom: 3px solid #662C1E;
 	margin-bottom: 1em;
 	overflow: hidden;
 }
 #contenido .item .datos_item{
+	font-family: 'Ubuntu Condensed', sans-serif;
 	text-align: right;
 }
 #contenido .item .datos_item .tipo{
+	font-family: 'Ubuntu Condensed', sans-serif;
 	background: #885015;
 	color: white;
 	display: inline-block;
@@ -175,7 +179,7 @@ nav ul li a{
 	text-decoration: none;
 }
 #contenido .item .estado_item{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	color: #aaa;
 }
 #contenido .item .imagen_item{
@@ -191,18 +195,18 @@ nav ul li a{
 }
 
 #contenido .item .titulo_item{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 1.2em;
 }
 
 #contenido .item .titulo_item a{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	color: #444;
 	text-decoration: none;
 }
 
 #buscador{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	display: block;
 	background: #D6CCBD;
 	padding: 0 0 0.2em 0;
@@ -220,7 +224,7 @@ nav ul li a{
 }
 
 #fbuscar{
-	
+	font-family: 'Cutive Mono', ;
 	display: inline-block;
 	font-size: 1.3em;
 	margin: .1em 0 0 0.5em; 

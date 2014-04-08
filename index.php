@@ -176,11 +176,10 @@
 	</section>
 
 	<!-- end recientes -->
-	<footer>
-		<p>
-			<strong>Pulse 2014</strong>
-		</p>
-	</footer>
+
+	<!-- start footer -->
+		<?php include('footer.php'); ?>
+	<!-- end footer -->
 	
 <!-- scripts -->
 

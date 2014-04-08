@@ -138,6 +138,24 @@ nav ul li a{
 	margin: 1em;
 }
 
+#contenido .descripcion{
+
+	background: white;
+	border-bottom: 3px solid #662C1E;
+}
+
+#contenido .descripcion .titulo_descripcion{
+	
+	font-size: 1.4em;
+	padding: 0.5em 0 0 0.2em;
+	color: #583400;
+}
+
+#contenido .descripcion .contenido_descripcion{
+	text-align: left;
+	padding: 0 0 0.3em 2em;
+}
+
 #contenido .item{
 
 	background: white;

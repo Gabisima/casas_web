@@ -17,7 +17,12 @@ footer{
 	text-align: center;
 	padding: 1em;
 }
-
+h1
+{
+	color: #583400;
+	font-family: 'Maven Pro', sans-serif;
+ 	font-size : 24px;	
+}
 header{
 
 	background : #662C1E;

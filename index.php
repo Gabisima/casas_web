@@ -58,11 +58,27 @@
 	
 	<!--end slider -->
 	
-	<!-- <section id="noticias">
-		<article class="post">
-			
-		</article>
-	</section> -->
+	<!-- start recientes -->
+	
+	<div class="contenedor_lista">
+		<div class="contendor_caja">
+			<figure><img src="images/inmuebles/casa2.jpg" width="120px" height="100px" alt=""></figure>
+			<h2 class="contenedor_titulo">
+				Casa sustentable la virgen
+			</h2>
+
+			<div class="contenedor_estado">
+				Edo. Mex
+			</div>
+
+			<div class="contenedor_descripcion">
+				Casa sustentable bonita en zona residencial la virge porque YOLO
+			</div>
+		</div>
+
+	</div>
+
+	<!-- end recientes -->
 	<footer>
 		<p>
 			<strong>Pulse 2014</strong>

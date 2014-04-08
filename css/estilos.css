@@ -3,7 +3,7 @@ a{
 }
 
 body{
-	background-image : url(background_2_.png);
+	background-image : url('../images/background_2_.png');
 	background-repeat : no-repeat;
 }
 footer{
@@ -33,12 +33,7 @@ header figure{
 	float: left;
 }
 
-header h1{
-	
-	font-size: 1.3em;
-	font-weight: normal;
-	margin: 0.65em 70px 0 0;
-}
+
 header #user{
 	
 	margin: 0.6em 0.5em 0 0;
@@ -95,6 +90,13 @@ nav ul li a{
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
+
+.contenedor_lista{
+
+	margin: 0.2em 0.2em 0.2em;
+	background: white;
+}
+
 .tabs{
 
 	background: olive;
@@ -116,9 +118,9 @@ nav ul li a{
 }
 
 .tabs ul li #active{
-	color: white;
 	background: #519244;
 	border-bottom: 0.1em;
+	color: white;
 	padding: 0 0.2em 0 0.2em;
 }
 
@@ -176,7 +178,7 @@ nav ul li a{
 
 .titulo
 {
-	margin: 0;
+	margin: 0 0 0.1em 0;
 }
 
 #slides {
@@ -220,3 +222,4 @@ nav ul li a{
   float: left;
   overflow: hidden;
 }
+

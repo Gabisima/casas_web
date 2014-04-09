@@ -17,18 +17,18 @@
 				</li> -->
 
 				<li>
-					<a href="#">Noticias</a>
+					<a href="noticias.php">Noticias</a>
 					
 				</li>
 
 				<li>
 				<!-- se puede usar <li id ="propiedades">  para destacar  -->
-					<a href="catalogo.php">Propiedades</a>
+					<a href="propiedades.php">Propiedades</a>
 					
 				</li>
 
 				<li>
-					<a href="#">Contacto</a>
+					<a href="contacto.php">Contacto</a>
 					
 				</li>
 			</ul>

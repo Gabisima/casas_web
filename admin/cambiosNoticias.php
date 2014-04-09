@@ -1,55 +1,60 @@
-<?php include "conexion.php"; ?>
-<!DOCTYPE HTML>
+<?php 
+	include "conexion.php"; 
+	$id = @$_GET['id'];
+	if(($id != "")||($id != NULL)){
+  $sql = mysql_query("SELECT * FROM noticias WHERE id = '$id'");
+	while($row = mysql_fetch_object($sql)){
+?>
 <html>
-	<head>
+  <head>
+
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-		<meta charset="UTF-8" />
-		<title>Dynasty | Publicar</title>
+    <meta charset="UTF-8" />
+    <title>Dynasty | Cambiar</title>
         
    <!-- Change Div Function -->
-		<script>
-			$(document).ready(function(){
-			  $("#inmueble").click(function(){
-			    $("#div1").load("alta.php");
-			  });
-			});
+    <script>
+      $(document).ready(function(){
+        $("#inmueble").click(function(){
+          $("#div1").load("alta.php");
+        });
+      });
 
-			$(document).ready(function(){
-			  $("#noticias").click(function(){
-			    $("#div1").load("altaNoticia.php");
-			  });
-			});
-		</script>
+      $(document).ready(function(){
+        $("#noticias").click(function(){
+          $("#div1").load("altaNoticia.php");
+        });
+      });
+    </script>
         
-		<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 
     <!-- Our CSS stylesheet file for DropFile-->
     <link rel="stylesheet" href="assets/css/styles.css?v=1" />
 
-		<script type="text/javascript">
-		tinymce.init({
-		    selector: "textarea"
-		 });
-		</script>
+    <script type="text/javascript">
+    tinymce.init({
+        selector: "textarea"
+     });
+    </script>
 
     <!-- General CSS File-->
     <link rel="stylesheet" href="css/stylesheet.css?v=2">
-   
-	</head>
-<form action="altaNoticia.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
+</head>
+<form action="cambiosNoticias&id=.php" method="post" enctype="multipart/form-data" name="formulario" encccept-charset="UTF-8" >
 <label>Autor</label>
-  <input type="text" id="autor" name="autor" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
+  <input type="text" id="autor" name="autor" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo" value="<?php echo $row->autor; ?>">
 
   <label>Email</label>
-  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
+  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain" value="<?php echo $row->email; ?>">
 
   <label>Confirmar Email</label>
-  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
+  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)" value=<?php echo $row->email; ?>
   <label>Título de la Noticia</label>
-  <input type="text" name="titulo" placeholder="Microsoft compra un nuevo edificio en Querétaro" size="30" maxlength="70" required>
+  <input type="text" name="titulo" placeholder="Microsoft compra un nuevo edificio en Querétaro" size="30" maxlength="70" required value="<?php echo $row->titulo; ?>">
 
   <label>Fecha de la Noticia</label>
-  <input type = "date" name = "fecha" size = "20" maxlength = "50" required pattern="[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}" placeholder="DD/MM/YYYY" title="DD/MM/YYYY (No olvides los guiones)">
+  <input type = "date" name = "fecha" size = "20" maxlength = "50" required pattern="[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}" placeholder="DD/MM/YYYY" title="DD/MM/YYYY (No olvides los guiones)" value="<?php echo $row->fecha; ?>">
 
 <script>
 function content() {
@@ -61,7 +66,7 @@ function content() {
 
  <br>
     <label>Noticia</label><br>
-    <textarea name="noticia" style="width:100%; height:240px" id="noticia"></textarea>
+    <textarea name="noticia" style="width:100%; height:240px" id="noticia" value=<?php echo $row->noticia; ?></textarea>
     
 
   <br><label>Fotografías</label>
@@ -70,7 +75,7 @@ function content() {
     </div>
 
     <label>Liga a video de YouTube</label>
-    <input type="url" name="video" size="30" maxlength="100" required placeholder="https://www.youtube.com/watch?v=lxgelwqe8-E">
+    <input type="url" name="video" size="30" maxlength="100" required placeholder="https://www.youtube.com/watch?v=lxgelwqe8-E" value=<?php echo $row->video; ?>
 
         <!-- Including The jQuery Library -->
     <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
@@ -196,11 +201,12 @@ function content() {
 
 </script>
 
-  <input type="submit" value="Publicar" id="enviar" name="enviar" onclick="content()" /> 
   <input type="text" name="area" id="area" />
-  <input type="text" name="foto1" id="foto1"/>
-  <input type="text" name="foto2" id="foto2"/>
-   <input type="text" name="foto3" id="foto3" />
+  <label>Archivos de Fotografías</label>
+  <input type="text" name="foto1"  value="<?php echo $row->foto1; ?>"/>
+  <input type="text" name="foto2"  value="<?php echo $row->foto2; ?>"/>
+  <input type="text" name="foto3" value="<?php echo $row->foto3; ?>" />
+  <input type="submit" value="Publicar" id="enviar" name="enviar" onclick="content()" /> 
   </form>
   
   <script>
@@ -213,9 +219,10 @@ function check(input) {
   }
 }
 </script>
+<?php } }?>
 
- <?php
-//Inserción de Datos
+<?php
+//Inserción de datos
 if(isset($_POST['enviar'])){
   $id = 0;
   echo $autor = $_POST['autor'];
@@ -226,10 +233,10 @@ if(isset($_POST['enviar'])){
   echo $foto1  = $_POST['foto1'];
   echo $foto2  = $_POST['foto2'];
   echo $foto3  = $_POST['foto3'];
-	echo $video  = $_POST['video'];
+  echo $video  = $_POST['video'];
 
-	mysql_query("INSERT INTO noticias VALUES('$id', '$autor', '$email', '$titulo', '$fecha', '$noticia', '$foto1', '$foto2', '$foto3', '$video')");
+  mysql_query("UPDATE noticias SET autor = '$autor', email = '$email', titulo = '$titulo', fecha = '$fecha', noticia = '$noticia', foto1 = '$foto1', foto2 = '$foto2', foto3 = '$foto3', video = '$video' WHERE id = '$id' " );
 ?>
-<?php } ?>
 <p>Datos Insertados</p>
+<?php }?>
 </html>

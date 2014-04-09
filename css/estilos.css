@@ -349,7 +349,7 @@ nav ul li a{
 }
 
 .message_error{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	border-radius: 0.5em;
 	margin: 1em 1em 0 1em;
 	box-shadow: 0.5em;

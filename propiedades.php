@@ -29,8 +29,6 @@
   		$sql = @mysql_query("SELECT * FROM inmuebles");
 		while ($row = mysql_fetch_object($sql))
 
-
-			
 		{
 		?>
 		<article class="item">

@@ -32,10 +32,10 @@
 		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/inmuebles/<?php echo $row->foto1; ?>">
+				<a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1; ?>"></a>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="#">
+				<a href="propiedad.php?id=<?php echo $row->id;?>">
 					<?php echo $row->titulo;?>
 				</a>
 			</h2>

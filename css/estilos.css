@@ -140,6 +140,11 @@ nav ul li a{
 	width: 200px;
 }
 
+.youtube-player {
+	display: block;
+	margin: 0 auto;
+}
+
 #contenido{
 
 	margin: 1em;

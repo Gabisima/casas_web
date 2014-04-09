@@ -53,11 +53,8 @@
 			</div>
 
 		</article> 		
-<?php 	} ?>
-<footer>
-		<p>
-			<strong>Pulse 2014</strong>
-		</p>
-</footer>
+	<?php 	} ?>
+	</section>
+<?php include('footer.php'); ?>
 </body>
 </html>

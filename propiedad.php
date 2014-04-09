@@ -61,7 +61,7 @@
 		?>
 		
 		<div class="message_error">
-			Debes ingresar un inmueble, consultalos en <a href="catalogo.php">propiedades</a>
+			Selecciona una propiedad de abajo o bien consulta más en <a href="propiedades.php">propiedades</a>
 		</div>
 	<?php }
 	else
@@ -152,6 +152,7 @@
 		</article>
 		<?php }?>
 	<?php } ?>
+	</section>
 	<!-- end similares -->
 
 

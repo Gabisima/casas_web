@@ -3,8 +3,6 @@
  	<?php
  			//Conectar a la base de datos
  			include 'conexion.php'; 
- 			mysql_connect("localhost", "root", "") or die ("No hay nada");
- 			mysql_select_db("bienesraices") or die ("No hay base");
  	 ?>
 	<head>
  		<meta charset="utf-8">
@@ -14,6 +12,7 @@
  		<link rel="stylesheet" href="css/estilos.css">
  		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 	</head>
  	
 	<body>

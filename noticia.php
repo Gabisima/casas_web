@@ -1,5 +1,9 @@
 <!doctype html>
 <html lang="en">
+ 	<?php
+ 			//Conectar a la base de datos
+ 			include 'conexion.php';
+ 	 ?>
 <head>
 	<meta charset="UTF-8">
 	<title>Noticia (titulo)</title>
@@ -54,17 +58,15 @@
 	<!-- start buscador -->
 	<?php include('buscador.php'); ?>
 	<!-- end buscador -->
-
+		<?php 
+  		$sql = @mysql_query("SELECT * FROM noticias");
+		?>
 	<!-- start slider -->
 	<div id="owl-demo">
          
-	  <div class="item"><a href="#"><img src="images/noticias/f01.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/noticias/f02.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/villascampo.jpg" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto1; ?>" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto2; ?>" alt=""></a></div>
+	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto3; ?>" alt=""></a></div>
 	
 	</div>
 	<!-- end slider -->
@@ -73,7 +75,7 @@
 	<div id="contenido">
 		<div class="descripcion">
 			<h2 class="titulo_descripcion">
-				Descripción
+				<?php echo $row->titulo;?>
 			</h2>
 			<div class="contenido_descripcion">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, vero, ea voluptatibus consequatur deserunt nesciunt nobis commodi expedita ad minima temporibus labore fugit eligendi neque distinctio itaque quaerat sed. Ipsam!
@@ -86,7 +88,7 @@
 	<section id="contenido">
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
+				<img src="images/noticias/<?php echo $row->foto1; ?>"
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
@@ -156,10 +158,6 @@
 
 	</section>
 	<!-- end similares -->
-
-
-
-
 
 	<!-- start footer -->
 	<?php include('footer.php'); ?>

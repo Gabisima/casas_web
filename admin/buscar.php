@@ -46,18 +46,15 @@
             <td><?php echo $row->email; ?></td>
             <td><?php echo $row->fecha; ?></td>
             <td><?php echo $row->video; ?></td>
-            <td><button id = "boton" name="enviar" value="borrar"><?php echo 'Borrar'; ?></button><br>
-            <a id="borrar" href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>"><?php echo 'Modificar'; ?></a></td>
+            <td>
+            <a id="borrar" href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>">Modificar</a></td>
+            <td><a href="borrar.php?id=<?php echo $row->id ?>">Borrar</a></td>
+          <!--   <td><button id = "boton" name="enviar" value="borrar">
+                Eliminar
+            </button></td> -->
           </tr>
 		  <?php } ?>
 
-<?php
-if (isset($_POST['enviar']) == 'borrar'){
-    $id = $_POST['id'];
-    mysql_query("DELETE FROM noticias WHERE id = '$id'"); 
-    }
-
-?>
         </table>
     </body>
 </html>

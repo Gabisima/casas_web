@@ -1,12 +1,9 @@
 <!doctype html>
 <html lang="en">
- 	<?php
- 			//Conectar a la base de datos
- 			include 'conexion.php';
- 	 ?>
 <head>
+	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
-	<title>Noticia (titulo)</title>
+	<title>Terraza | Noticias</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
@@ -58,106 +55,83 @@
 	<!-- start buscador -->
 	<?php include('buscador.php'); ?>
 	<!-- end buscador -->
-		<?php 
-  		$sql = @mysql_query("SELECT * FROM noticias");
+	<?php 
+	$id = @$_GET['id']; //Obtener id de la casa
+	if ($id == "" || $id == NULL) {
 		?>
+		
+		<div class="message_error">
+			Debes ingresar un inmueble, consultalos en <a href="catalogo.php">propiedades</a>
+		</div>
+	<?php }
+	else
+	{
+		$sql = @mysql_query("SELECT * FROM noticias WHERE id = '$id'");
+		while($row = mysql_fetch_object($sql)){
+	?>
 	<!-- start slider -->
 	<div id="owl-demo">
-         
-	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto1; ?>" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto2; ?>" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/noticias/<?php echo $row->foto3; ?>" alt=""></a></div>
-	
+          
+	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/assets/images/<?php echo $row->foto1;?>" alt=""></a></div>
+	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/assets/images/<?php echo $row->foto2;?>" alt=""></a></div>
+	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/assets/images/<?php echo $row->foto3;?>" alt=""></a></div>
+
 	</div>
 	<!-- end slider -->
 	
 	<!-- start descripcion -->
 	<div id="contenido">
 		<div class="descripcion">
+			<div class="caracteristicas">
+				<?php echo $row->fecha;?>
+			</div>
 			<h2 class="titulo_descripcion">
 				<?php echo $row->titulo;?>
 			</h2>
+			
 			<div class="contenido_descripcion">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, vero, ea voluptatibus consequatur deserunt nesciunt nobis commodi expedita ad minima temporibus labore fugit eligendi neque distinctio itaque quaerat sed. Ipsam!
+				<?php echo $row->noticia;?>
 			</div>
 		</div>
 	</div>
 	<!-- end descripcion -->
+	<?php } } ?>
 
-	<!-- start similares -->
+<!-- start recientes -->
+	
 	<section id="contenido">
+	<?php 
+  	$c = @$_POST['buscar'];
+  	$sql = @mysql_query("SELECT * FROM noticias order by id desc");
+  	
+	while ($row = mysql_fetch_object($sql))
+	{  
+		$i++
+	?>	
+		<?php if ($i<=6) {	
+		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/noticias/<?php echo $row->foto1; ?>"
+				<a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/assets/images/<?php echo $row->foto1;?>" /></a>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
+				<a href="noticia.php?id=<?php echo $row->id;?>">
+					<?php echo $row->titulo;?>
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				Edo.Mex
-			</div>
-			
-			<div class="precio_item">
-				$4,000,000.00 MXN
-			</div>
-
-			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
+				<?php echo $row->fecha;?>
 			</div>
 
 		</article>
-		<article class="item">
-			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
-			</figure>
-			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
-				</a>
-			</h2>
-
-			<div class="estado_item">
-				Edo.Mex
-			</div>
-			
-			<div class="precio_item">
-				$4,000,000.00 MXN
-			</div>
-
-			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
-			</div>
-
-		</article>
-		<article class="item">
-			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
-			</figure>
-			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
-				</a>
-			</h2>
-
-			<div class="estado_item">
-				Edo.Mex
-			</div>
-			
-			<div class="precio_item">
-				$4,000,000.00 MXN
-			</div>
-
-			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
-			</div>
-
-		</article>
-
-	</section>
+		<?php }?>
+	<?php } ?>
 	<!-- end similares -->
+
+
+
+
 
 	<!-- start footer -->
 	<?php include('footer.php'); ?>

@@ -233,7 +233,7 @@ nav ul li a{
 }
 
 #contenido .descripcion .telefono{
-
+	font-family: 'Ubuntu Condensed', sans-serif;
 	background: #D6CCBD;
 	text-align: center;
 	font-size: 1.2em;

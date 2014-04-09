@@ -3,17 +3,16 @@
  	<?php
  			//Conectar a la base de datos
  			include 'conexion.php'; 
- 			mysql_connect("localhost", "root", "") or die ("No hay nada");
- 			mysql_select_db("bienesraices") or die ("No hay base");
  	 ?>
 	<head>
  		<meta charset="utf-8">
  		<meta name="description" content="El hogar de los inmuebles">
- 		<title>Pulse | Inmuebles</title>
+ 		<title>Terraza | Noticias</title>
  		<link rel="stylesheet" href="css/normalize.css">
  		<link rel="stylesheet" href="css/estilos.css">
  		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 	</head>
  	
 	<body>
@@ -28,14 +27,15 @@
 		<?php 
   		$sql = @mysql_query("SELECT * FROM noticias");
 		while ($row = mysql_fetch_object($sql))
+
 		{
 		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/noticias/<?php echo $row->foto1; ?>">
+				<a href="noticia.php?id=<?php echo $row->id;?>"> <img src="admin/assets/images/<?php echo $row->foto1; ?>"></a>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="#">
+				<a href="noticia.php?id=<?php echo $row->id;?>"> 
 					<?php echo $row->titulo;?>
 				</a>
 			</h2>

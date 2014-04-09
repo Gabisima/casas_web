@@ -5,7 +5,7 @@
 	<?php
 		//Conectar a la base de datos
 		$i = 1;
-		include "conexion.php"; 
+		include ('conexion.php'); 
 
 	?>
 	<meta charset="UTF-8">

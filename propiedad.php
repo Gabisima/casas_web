@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
 	<title>Propiedad (titulo)</title>
 	<!--start estilos generales -->
@@ -54,107 +55,103 @@
 	<!-- start buscador -->
 	<?php include('buscador.php'); ?>
 	<!-- end buscador -->
-
+	<?php 
+	$id = @$_GET['id']; //Obtener id de la casa
+	if ($id == "" || $id == NULL) {
+		?>
+		
+		<div class="message_error">
+			Debes ingresar un inmueble, consultalos en <a href="catalogo.php">propiedades</a>
+		</div>
+	<?php }
+	else
+	{
+		$sql = @mysql_query("SELECT * FROM inmuebles WHERE id = '$id'");
+		while($row = mysql_fetch_object($sql)){
+	?>
 	<!-- start slider -->
 	<div id="owl-demo">
           
-	  <div class="item"><a href="#"><img src="images/inmuebles/casa2.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/elcristo.jpg" alt=""></a></div>
-	  <div class="item"><a href="#"><img src="images/inmuebles/villascampo.jpg" alt=""></a></div>
-	
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" alt=""></a></div>
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto2;?>" alt=""></a></div>
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto3;?>" alt=""></a></div>
+
 	</div>
 	<!-- end slider -->
 	
 	<!-- start descripcion -->
 	<div id="contenido">
 		<div class="descripcion">
+			<div class="telefono">
+				<?php echo $row->telefono;?>
+			</div>
 			<h2 class="titulo_descripcion">
-				Descripción
+				<?php echo $row->titulo;?>
 			</h2>
+			
 			<div class="contenido_descripcion">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, vero, ea voluptatibus consequatur deserunt nesciunt nobis commodi expedita ad minima temporibus labore fugit eligendi neque distinctio itaque quaerat sed. Ipsam!
+				<?php echo $row->descripcion;?>
+			</div>
+			<div class="caracteristicas">
+				<p class="localidad">Localidad: <?php echo $row->localidad;?></p>
+				<p class="superficie">Superficie: <?php echo $row->superficie;?> m2</p>
+				<p class="direccion">Dirección: <?php echo $row->direccion;?></p>
+			</div>
+			<div class="descripcion_precio">
+				$<?php echo $row->precio;?> <?php echo $row->unidad;?>
+			</div>
+			
+			<div class="descripcion_tipo">
+				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+			</div>
+			<div class="datos_persona">
+				<a href="#" class="nombre"><?php echo $row->nombre;?></a>
+				<a href="#" class="correo"><?php echo $row->email;?></a>
+				
 			</div>
 		</div>
 	</div>
 	<!-- end descripcion -->
+	<?php } } ?>
 
-	<!-- start similares -->
+<!-- start recientes -->
+	
 	<section id="contenido">
+	<?php 
+  	$c = @$_POST['buscar'];
+  	$sql = @mysql_query("SELECT * FROM inmuebles order by id desc");
+  	
+	while ($row = mysql_fetch_object($sql))
+	{  
+		$i++
+	?>	
+		<?php if ($i<=6) {	
+		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
+				<a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" /></a>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
+				<a href="propiedad.php?id=<?php echo $row->id;?>">
+					<?php echo $row->titulo;?>
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				Edo.Mex
+				<?php echo $row->localidad;?>
 			</div>
 			
 			<div class="precio_item">
-				$4,000,000.00 MXN
+				$<?php echo $row->precio;?> <?php echo $row->unidad;?>
 			</div>
 
 			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
+				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
 			</div>
 
 		</article>
-		<article class="item">
-			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
-			</figure>
-			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
-				</a>
-			</h2>
-
-			<div class="estado_item">
-				Edo.Mex
-			</div>
-			
-			<div class="precio_item">
-				$4,000,000.00 MXN
-			</div>
-
-			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
-			</div>
-
-		</article>
-		<article class="item">
-			<figure class="imagen_item">
-				<img src="images/inmuebles/elcristo.jpg" />
-			</figure>
-			<h2 class="titulo_item">
-				<a href="#">
-					Me urge, casa bonita, la virgen
-				</a>
-			</h2>
-
-			<div class="estado_item">
-				Edo.Mex
-			</div>
-			
-			<div class="precio_item">
-				$4,000,000.00 MXN
-			</div>
-
-			<div class="datos_item">
-				<a href="#" class="tipo">Casa</a>
-			</div>
-
-		</article>
-
-	</section>
+		<?php }?>
+	<?php } ?>
 	<!-- end similares -->
 
 

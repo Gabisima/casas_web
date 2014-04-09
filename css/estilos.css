@@ -142,18 +142,31 @@ nav ul li a{
 #contenido{
 
 	margin: 1em;
+
 }
 
 #contenido .descripcion{
 
 	background: white;
+	margin-bottom: 3em;
+	border-radius: 0.5em;
 	border-bottom: 3px solid #662C1E;
+	position: relative;
+}
+
+#contenido .descripcion .caracteristicas{
+	
+	padding: 0.3em 0 0.3em 2em;
+	margin: 0.2em 0.5em 0.4em 0.5em;
+	background: #FFE188;
+	border-radius: 0.5em;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 }
 
 #contenido .descripcion .titulo_descripcion{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 1.4em;
-	padding: 0.5em 0 0 0.2em;
+	padding: 0 0 0 0.2em;
 	color: #583400;
 }
 
@@ -161,6 +174,72 @@ nav ul li a{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	text-align: left;
 	padding: 0 0 0.3em 2em;
+}
+
+#contenido .descripcion .datos_persona
+{
+	background: white;
+	border-radius: 0 0 0.5em 0.5em;
+	left: 3%;
+	margin-top: 3px; 
+	padding: 0.5em 1em;
+	position: absolute;
+	right: 3%;
+	top: 100%;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+}
+
+#contenido .descripcion .descripcion_precio{
+
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background: #232323;
+	color: white;
+	padding: 0.5em;
+	margin: 0 0 0.3em 0.5em;
+	display: inline-block;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+}
+
+
+#contenido .descripcion .descripcion_tipo{
+
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background: #885015;
+	color: white;
+	display: inline-block;
+	margin: 0 .5em .3em 0;
+	padding: 0.5em;
+	float: right;
+	text-decoration: none;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+}
+#contenido .descripcion .descripcion_tipo a{
+	
+	font-family: 'Ubuntu Condensed', sans-serif;
+	text-decoration: none;
+	color: white;
+}
+
+#contenido .descripcion .datos_persona .nombre{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	text-decoration: none;
+	color: #000;
+}
+#contenido .descripcion .datos_persona .correo
+{
+	float: right;
+	color: #000;
+	text-decoration: none;
+}
+
+#contenido .descripcion .telefono{
+
+	background: #D6CCBD;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	box-shadow: rgba(0,0,0,0.5) 0px 1px 5px;
 }
 
 #contenido .item{

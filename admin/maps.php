@@ -5,6 +5,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <script type="text/javascript" src="js/input.js"></script>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -145,19 +146,5 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div id="map-canvas"></div>
   </body>
 
-<script>
-function check(input) {
-  if (input.value == null || input.value == '') {
-    input.setCustomValidity('Las direcciones de correo electrónico no coinciden');
-    alert("Hueles a Popo");
-  } else {
-    ;
-  }
-}
-
-<?php 
- $map = $_POST['pac-input'];
-?>
-</script>
 </html>
 

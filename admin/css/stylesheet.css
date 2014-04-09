@@ -18,7 +18,6 @@ body{
   -moz-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
   -o-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
   -ms-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
-  box-shadow:0 0 5px rgba(0, 70, 255, .8);
 }
 
 :required {
@@ -36,6 +35,7 @@ form {
   width:800px;
   margin: 20px auto;
   font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  box-shadow:0 0 5px rgba(0, 70, 255, .8);
 }
 
 input {
@@ -113,6 +113,7 @@ input:not([type=radio]){
   -o-border-radius:5px;
   -ms-border-radius:5px;
   border-radius:5px;
+  z-index:1;
  }
 
  #telefono{
@@ -257,8 +258,34 @@ label.etiqueta:before {
   margin-right:800px;
   display: inline-block;
   position:relative;
+  z-index:1;
 }
 
 #opcional{
 	color: #CACACA; /*LOL*/
 }
+
+#area{
+  width: 100px;
+  height: 10px;
+  display: none;
+}
+
+/*#foto1{
+  width: 100px;
+  height: 10px;
+  display: none;
+}*/
+
+#foto2{
+  width: 100px;
+  height: 10px;
+  display: none;
+}
+
+#foto3{
+  width: 100px;
+  height: 10px;
+  display: none;
+}
+

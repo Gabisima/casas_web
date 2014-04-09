@@ -9,7 +9,7 @@ $(function(){
 		paramname:'pic',
 		
 		maxfiles: 3,
-    	maxfilesize: 50,
+    	maxfilesize: 1,
 		url: 'post_file.php',
 		
 		uploadFinished:function(i,file,response){
@@ -104,5 +104,8 @@ $(function(){
 	function showMessage(msg){
 		message.html(msg);
 	}
+
+	if(maxarchivos == 2)
+		 document.getElementById("foto1").value = file.name;
 
 });

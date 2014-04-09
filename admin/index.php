@@ -12,7 +12,7 @@
 
 			$(document).ready(function(){
 			  $("#noticias").click(function(){
-			    $("#div1").load("index.php");
+			    $("#div1").load("altaNoticia.php");
 			  });
 			});
 		</script>

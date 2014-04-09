@@ -61,7 +61,7 @@
 		?>
 		
 		<div class="message_error">
-			Debes ingresar un inmueble, consultalos en <a href="catalogo.php">propiedades</a>
+			¿Estás buscando una noticia?, consúltalas en <a href="noticias.php">noticias</a>
 		</div>
 	<?php }
 	else
@@ -91,6 +91,10 @@
 			
 			<div class="contenido_descripcion">
 				<?php echo $row->noticia;?>
+			</div>
+			<div class="container">
+			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
+				width="60%" height="180" src="//www.youtube.com/embed/jyze_lz6uDw" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
@@ -128,10 +132,7 @@
 		<?php }?>
 	<?php } ?>
 	<!-- end similares -->
-
-
-
-
+</section>
 
 	<!-- start footer -->
 	<?php include('footer.php'); ?>

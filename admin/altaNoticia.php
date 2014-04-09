@@ -54,7 +54,6 @@
 <script>
 function content() {
   var contenido = tinyMCE.get("noticia").getContent();
-    alert(contenido);
    document.getElementById("area").value = contenido;
 }
 </script>
@@ -217,6 +216,9 @@ function check(input) {
  <?php
 //Inserción de Datos
 if(isset($_POST['enviar'])){
+  $vid = $_POST['video'];
+  $junk  = strtok($vid, '=');
+  $video = strtok('=');
   $id = 0;
   echo $autor = $_POST['autor'];
   echo $email  = $_POST['email'];
@@ -226,7 +228,8 @@ if(isset($_POST['enviar'])){
   echo $foto1  = $_POST['foto1'];
   echo $foto2  = $_POST['foto2'];
   echo $foto3  = $_POST['foto3'];
-	echo $video  = $_POST['video'];
+  echo $video;
+	//echo $video  = $_POST['video'];
 
 	mysql_query("INSERT INTO noticias VALUES('$id', '$autor', '$email', '$titulo', '$fecha', '$noticia', '$foto1', '$foto2', '$foto3', '$video')");
 ?>

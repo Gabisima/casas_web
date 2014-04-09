@@ -92,8 +92,10 @@
 			<div class="contenido_descripcion">
 				<?php echo $row->noticia;?>
 			</div>
+			<div class="container">
 			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
-				width="60%" height="180" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen></iframe>
+				width="60%" height="180" src="//www.youtube.com/embed/jyze_lz6uDw" frameborder="0" allowfullscreen></iframe>
+			</div>
 		</div>
 	</div>
 	<!-- end descripcion -->

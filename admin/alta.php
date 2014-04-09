@@ -80,13 +80,16 @@
         src="maps.php" id="direccion" name="direccion">
     </iframe>
 
+    <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
+      <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
+
   <label>Superficie del Inmueble (En metros cuadrados)</label>
   <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
   
   <label>Precio del Inmueble</label><br>
   <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price">
     <label class="etiqueta">
-    <select name="precio" id="precio" class="selector">
+    <select name="unidad" id="unidad" class="selector">
     <?php 
 		$sql = mysql_query("SELECT * FROM UNIDADES");
 		while($row = mysql_fetch_object($sql))
@@ -106,7 +109,6 @@ function content() {
  <br>
     <label>Descripción del Inmueble</label><br>
     <textarea name="descripcion" style="width:100%; height:240px" id="descripcion" ></textarea>
-        <a href="#" id="link">Guardar Cambios</a>
  	<div id="update"></div>
  
     <script type="text/javascript">
@@ -131,6 +133,7 @@ function content() {
             return false;
         }
     </script>    
+
 
   <br><label>Fotografías</label>
     <div id="dropbox" name="drop">
@@ -281,34 +284,28 @@ function content() {
       <input type="text" name="foto3" id="foto3" />
   </form>
 
-    <button onclick="content()" id="butt">Get content</button>
- <?php
-     if (isset($_GET['js_var'])) $php_var = $_GET['js_var'];
-        else $php_var = "<br />content is not set!";
- 
-        echo $php_var;
- ?>
-
 
 
  <?php
 //Inserción de Datos
 if(isset($_POST['enviar'])){
+	$id = 0;
 	echo $nombre = $_POST['nombre'];
 	echo $email  = $_POST['email'];
 	echo $telefono  = $_POST['telefono'];
 	echo $titulo  = $_POST['titulo'];
 	echo $tipo  = $_POST['tipo'];
 	echo $localidad  = $_POST['localidad'];
-	echo $direccion  = $_POST['direccion'];
+	echo $direccion  = $_POST['direc'];
 	echo $superficie  = $_POST['superficie'];
 	echo $precio  = $_POST['precio'];
+	echo $unidad = $_POST['unidad'];
 	echo $descripcion  = $_POST['area'];
 	echo $foto1  = $_POST['foto1'];
 	echo $foto2  = $_POST['foto2'];
 	echo $foto3  = $_POST['foto3'];
 
-	mysql_query("INSERT INTO inmuebles VALUES('$nombre', '$email', '$telefono', '$titulo', '$tipo', '$localidad', '$direccion', '$superficie', $precio, '$descripcion','$foto1', $foto2, $foto3)");
+	mysql_query("INSERT INTO inmuebles VALUES('$id', '$nombre', '$email', '$telefono', '$titulo', '$tipo', '$localidad', '$direccion', '$superficie', '$precio', '$unidad', '$descripcion','$foto1', '$foto2', '$foto3')");
 ?>
 <p>Datos Insertados</p>
 <?php } ?>

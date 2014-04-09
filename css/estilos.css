@@ -343,6 +343,11 @@ nav ul li a{
   width: 100%;
 }
 
+.mapa{
+
+	margin: 0.2em  0.5em 0.2em 0.5em;
+}
+
 .message_error{
 
 	border-radius: 0.5em;

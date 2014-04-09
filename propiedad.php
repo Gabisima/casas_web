@@ -104,6 +104,9 @@
 			<div class="descripcion_tipo">
 				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
 			</div>
+			<div class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.5830422951562!2d-99.5773727!3d19.256995300000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8b100c0c97b3%3A0x2ff90af5f6933fb!2sAv+Tecnol%C3%B3gico+46!5e0!3m2!1ses-419!2smx!4v1397053973072" width="90%" height="450" frameborder="0" style="border:0"></iframe>
+			</div>
 			<div class="datos_persona">
 				<a href="#" class="nombre"><?php echo $row->nombre;?></a>
 				<a href="#" class="correo"><?php echo $row->email;?></a>

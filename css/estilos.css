@@ -416,7 +416,7 @@ nav ul li a{
     outline: none;
     box-shadow:0 0 0 3px #dde9ec;
 }
-.contacto input[type='submit']{
+.contacto input[type='button']{
     border: 1px solid #CED5D7;
     box-shadow:0 0 0 1px #1C1000;
     padding: 8px 16px;
@@ -427,12 +427,12 @@ nav ul li a{
     background: -moz-linear-gradient(top, #ffe9b6 0%, #dbc69a 100%);
     background: -webkit-linear-gradient(top, #ffe9b6 0%,#dbc69a 100%);
 }
-.contacto input[type='submit']:hover{
+.contacto input[type='button']:hover{
     background: #edfcff;
     background: -moz-linear-gradient(top, #c67f02 50%, #dbc69a 100%);
     background: -webkit-linear-gradient(top, #c67f02 50%,#dbc69a 100%);
 }
-.contacto input[type='submit']:active{
+.contacto input[type='button']:active{
     background: #fcc159;
     background: -moz-linear-gradient(top, #fcc159 50%, #c67f02 100%);
     background: -webkit-linear-gradient(top, #fcc159 50%,#c67f02 100%);

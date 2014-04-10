@@ -94,7 +94,7 @@
 				<?php echo $row->noticia;?>
 			</div>
 			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
-				width="480" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>
+				width="100%" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>
 			</iframe>
 			<div class="datos_persona">
 				<a href="#" class="autor"><?php echo utf8_encode ($row->autor);?></a>

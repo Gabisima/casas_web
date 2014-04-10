@@ -103,7 +103,7 @@
                 <a href="#" class="tipo"><?php echo $row->localidad; ?></a>
             </div>
             <div class="datos_persona">
-                <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
+                <a href ="cambiosInmuebles.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
                 <a href="borrar.php?id=<?php echo $row->id ?>&tipo=casa" class="correo">Borrar</a>
                 
             </div>

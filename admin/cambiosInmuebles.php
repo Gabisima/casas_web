@@ -1,5 +1,14 @@
-<?php include "conexion.php"; ?>
-<!DOCTYPE HTML>
+<?php 
+	include "conexion.php"; 
+	$id = @$_GET['id'];
+	if(($id != "")||($id != NULL)){
+  $sql = mysql_query("SELECT * FROM inmuebles WHERE id = '$id'");
+	while($row = mysql_fetch_object($sql)){
+?>
+
+
+
+	<!DOCTYPE HTML>
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/normalize.css">
@@ -46,24 +55,24 @@
 	
 	<div class="item">
 	  <label>Nombre Completo</label>
-	  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
+	  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo" value="<?php echo $row->nombre; ?>">
 	</div>
 	
 	<div class="item">
 	  <label>Email</label><br>
-	  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
+	  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain"value="<?php echo $row->email; ?>">
 	</div>
 	<div class="item">
 	  <label>Confirmar Email</label>
-	  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
+	  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)"value="<?php echo $row->email; ?>">
 	</div>
 	<div class="item">
 	  <label>Teléfono </label><label id="opcional">(Opcional)</label>
-	  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)">
+	  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)"value="<?php echo $row->telefono; ?>">
   	</div>
   	<div class="item">
 	  <label>Título de la Publicación</label>
-	  <input type="text" name="titulo" placeholder="Vendo casa de 4 habitaciones en Miramontes" size="30" maxlength="70" required>
+	  <input type="text" name="titulo" placeholder="Vendo casa de 4 habitaciones en Miramontes" size="30" maxlength="70" value="<?php echo $row->titulo; ?>"required>
   	</div>
   	<div class="item">
 	  <label>Tipo de Inmueble</label><br>
@@ -92,15 +101,18 @@
     	<option value="<?php echo $row->estado;?>"><?php echo $row->estado;?></option>
     <?php } ?>
     </select></label>
-
+</div>
+  	<div class="item">
   <label>Dirección del Inmueble</label>
         <iframe height="400px" width="95%" frameBorder="0" scrolling="no"
-        src="maps.php" id="direccion" name="direccion">
+        src="maps.php" id="direccion" name="direccion"value="<?php echo $row->direccion; ?>">
     </iframe>
-
+</div>
+  	<div class="item">
     <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
-      <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
-
+      <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" value="<?php echo $row->direccion; ?>">
+</div>
+  
 	<div class="item">
 	  <label>Superficie del Inmueble (En metros cuadrados)</label>
 	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
@@ -370,5 +382,12 @@ function changeID(element){
 	}
 }
 </script>
+<?php } }?>
 </body>
 </html>
+
+
+
+
+
+

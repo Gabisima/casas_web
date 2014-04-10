@@ -32,7 +32,7 @@
 		<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 
     <!-- Our CSS stylesheet file for DropFile-->
-    <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+    <!--<link rel="stylesheet" href="assets/css/styles.css?v=1" />-->
 
 		<script type="text/javascript">
 		tinymce.init({

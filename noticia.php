@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
 	<!-- end estilos generales -->
 
 	<!-- start jquery -->
@@ -93,7 +94,12 @@
 				<?php echo $row->noticia;?>
 			</div>
 			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
-				width="60%" height="180" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen></iframe>
+				width="480" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>
+			</iframe>
+			<div class="datos_persona">
+				<a href="#" class="autor"><?php echo utf8_encode ($row->autor);?></a>
+				<a href="#" class="correo"><?php echo utf8_encode ($row->email);?></a>
+			</div>
 		</div>
 	</div>
 	<!-- end descripcion -->

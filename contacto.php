@@ -30,10 +30,10 @@
 
  <h1> Contacto </h1>
        <form class='contacto' action="enviar.php" method="POST">
-            <div><label>Nombre:</label><input type='text' value='nombre' required></div>
-            <div><label>E-mail:</label><input type='text' value='mail' required></div>
-            <div><label>Teléfono:</label><input type='text' value='telefono' ></div>
-            <div><label>Mensaje:</label><textarea rows='6' value='mensaje' required></textarea></div>
+            <div><label>Nombre:</label><input name='nombre' type='text' value='nombre' required></div>
+            <div><label>E-mail:</label><input name='mail' type='text' value='mail' required></div>
+            <div><label>Teléfono:</label><input name='telefono' type='text' value='telefono' ></div>
+            <div><label>Mensaje:</label><textarea name='mensaje' rows='6' value='mensaje' required></textarea></div>
             <div><input type='submit' value='Enviar'></div>
         </form>
     </body>

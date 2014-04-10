@@ -46,10 +46,8 @@
 	</head>
   <body>
 
-    <?php include('header-admin.php'); ?>
-    <?php include('buscador-admin.php'); ?>
 <form action="altaNoticia.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
-
+  <div class="contenedor">
   <div class="item">
 <label>Autor</label>
   <input type="text" id="autor" name="autor" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
@@ -58,10 +56,7 @@
   <label>Email</label>
   <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
 </div>
-  <div class="item">
-  <label>Confirmar Email</label>
-  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
-  </div>
+ 
   <div class="item">
   <label>Título de la Noticia</label>
   <input type="text" name="titulo" placeholder="Microsoft compra un nuevo edificio en Querétaro" size="30" maxlength="70" required>
@@ -234,6 +229,7 @@ function content() {
   <div class="item">
    <input type="text" name="foto3" id="foto3" />
   </form>
+</div>
   
   <script>
 function check(input) {

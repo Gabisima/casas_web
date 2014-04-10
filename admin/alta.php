@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../css/estilos.css">
 		<link rel="stylesheet" href="css/admin.css">
 
-</head>
+
 
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
@@ -47,8 +47,7 @@
    
 	</head>
 	<body>
-		<?php include('header-admin.php'); ?>
-	<?php include('buscador-admin.php'); ?>
+		
 	
 	<div class="contenedor">
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >

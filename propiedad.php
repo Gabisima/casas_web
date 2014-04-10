@@ -99,7 +99,7 @@
 				<p class="direccion">Dirección: <?php echo utf8_encode ($row->direccion);?></p>
 			</div>
 			<div class="descripcion_precio">
-				$<?php echo utf8_encode ($row->precio);?> <?php echo $row->unidad;?>
+				$ <?php echo utf8_encode ($row->precio);?> <?php echo $row->unidad;?>
 			</div>
 			
 			<div class="descripcion_tipo">

@@ -3,7 +3,7 @@
 <head>
 	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
-	<title>Propiedad | Terraza</title>
+	<title>Propiedad (titulo)</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">

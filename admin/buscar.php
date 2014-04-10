@@ -10,7 +10,7 @@
 ?>
     <head>
         <meta charset="utf-8">
-        <title>Busqueda | Terraza</title>
+        <title>Dynasty | Consultar</title>
         <link rel="stylesheet" href="../css/normalize.css">
         <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
         <link rel="stylesheet" href="../css/estilos.css">

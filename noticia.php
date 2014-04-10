@@ -3,7 +3,7 @@
 <head>
 	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
-	<title>Noticia | Terraza </title>
+	<title>Terraza | Noticias</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">

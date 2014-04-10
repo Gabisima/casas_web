@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="css/admin.css">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
-		<title>Cambiar Inmueble | Terraza</title>
+		<title>Dynasty | Publicar</title>
         
         <!-- Change Div Function -->
 		<script>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="css/admin.css">
-		<title>Nueva Noticia | Terraza</title>
+		<title>Dynasty | Publicar</title>
         
    <!-- Change Div Function -->
 		<script>

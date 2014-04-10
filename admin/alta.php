@@ -2,6 +2,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/estilos.css">
+</head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
 		<title>Dynasty | Publicar</title>
@@ -34,6 +37,9 @@
        	<link rel="stylesheet" href="css/stylesheet.css?v=2">
    
 	</head>
+	<body>
+		<?php include('../header.php'); ?>
+	<?php include('buscador-admin.php'); ?>
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
 
   <label>Nombre Completo</label>
@@ -341,4 +347,5 @@ function changeID(element){
 	}
 }
 </script>
+</body>
 </html>

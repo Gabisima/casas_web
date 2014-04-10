@@ -1,26 +1,40 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
-		<script>
-			$(document).ready(function(){
-			  $("#inmueble").click(function(){
-			    $("#div1").load("alta.php");
-			  });
-			});
-
-			$(document).ready(function(){
-			  $("#noticias").click(function(){
-			    $("#div1").load("altaNoticia.php");
-			  });
-			});
-		</script>
-	</head>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/estilos.css">
+</head>
 <body>
-	<div><h2>Dynasty Real State</h2></div>
-	<div><button id="inmueble">Inmuebles</button>
-	<button id="noticias">Noticias</button></div>
-	<div id="div1"> <h1>I Will Change!</h1></div>
+	<?php include('../header.php'); ?>
+	<?php include('buscador-admin.php'); ?>
+	<div class="nav_admin">
+			<ul>
+
+				<!-- <li>
+					<a href="#">Inicio</a>
+				</li> -->
+
+				<li>
+					<a href="alta.php" class="inmuebles">Inmuebles</a>
+					
+				</li>
+
+				<li>
+				<!-- se puede usar <li id ="propiedades">  para destacar  -->
+					<a href="altaNoticia.php" class="noticias">Noticias</a>
+					
+				</li>
+
+			</ul>
+
+	</div>
+	<div class="message_error">
+		Selecciona una opción o busca con tu correo
+	</div>
+
+
+	
 </body>
 </html>

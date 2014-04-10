@@ -1,0 +1,8 @@
+<form action="buscar.php" method="post" enctype="multipart/form-data">
+		<div id="buscador">
+			<label for="fbuscar" id="fbuscar">Buscar por Correo</label>
+			<input name="email" type="text" id="email" required>
+			<a onclick="javascript:getElementById('formulario').submit();" href="buscar.php"><img src="images/search.png" alt="submit" /></a>
+
+		</div>
+	</form>

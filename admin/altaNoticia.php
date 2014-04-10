@@ -269,6 +269,6 @@ if(isset($_POST['enviar'])){
 	mysql_query("INSERT INTO noticias VALUES('$id', '$autor', '$email', '$titulo', '$fecha', '$noticia', '$foto1', '$foto2', '$foto3', '$video')");
 ?>
 <?php } ?>
-<p>Datos Insertados</p>
+<!-- <p>Datos Insertados</p> -->
 </body>
 </html>

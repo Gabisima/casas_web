@@ -4,7 +4,7 @@
 
 <header>	
 		<figure id="logo">
-			<a href="../index.php"><img src="images/logo.png"/></a>
+			<a href="../index.php"><img src="uploads/logo.png"/></a>
 		</figure>	
 
 		<!-- <h1>El hogar de los inmuebles</h1> -->
@@ -30,6 +30,6 @@
 
 		</nav>
 		<figure id="user">
-			<a href="index.php"><img src="images/user.png" alt="Admin"></a>
+			<a href="index.php"><img src="uploads/user.png" alt="Admin"></a>
 		</figure>
 	</header>

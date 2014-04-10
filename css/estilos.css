@@ -64,6 +64,13 @@ header #logo img{
 	
 }
 
+label {
+	padding: 0 0 0 0.5em;
+	color: #000000;
+	font-family: 'Maven Pro', sans-serif;
+ 	font-size : 1em;	
+}
+
 nav{
 
 	margin 0;
@@ -148,7 +155,17 @@ nav ul li a{
 #contenido{
 
 	margin: 1em;
+	position: relative;
 
+}
+
+.textInput {
+	border-radius: 2em;
+	background: #ffffff;
+	color: #000000;
+	padding: 0.6em;
+	font-size: .8em; 
+	font-family: 'Share Tech', sans-serif;
 }
 
 #contenido .descripcion{
@@ -158,6 +175,7 @@ nav ul li a{
 	border-radius: 0.5em;
 	border-bottom: 3px solid #662C1E;
 	position: relative;
+
 }
 
 #contenido .descripcion .caracteristicas{
@@ -187,7 +205,7 @@ nav ul li a{
 	background: white;
 	border-radius: 0 0 0.5em 0.5em;
 	left: 3%;
-	margin-top: 3px; 
+	margin-top: 0.2em; 
 	padding: 0.5em 1em;
 	position: absolute;
 	right: 3%;
@@ -249,6 +267,7 @@ nav ul li a{
 }
 
 #contenido .item{
+
 	font-family: 'Ubuntu Condensed', sans-serif;
 	background: white;
 	border-bottom: 3px solid #662C1E;
@@ -258,6 +277,7 @@ nav ul li a{
 #contenido .item .datos_item{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	text-align: right;
+
 }
 #contenido .item .datos_item .tipo{
 	font-family: 'Ubuntu Condensed', sans-serif;
@@ -314,19 +334,26 @@ nav ul li a{
 }
 
 #fbuscar{
-	font-family: 'Share Tech Mono', ;
+	font-family: 'Ubuntu Condensed', sans-serif;
 	display: inline-block;
 	font-size: 1.3em;
 	margin: .1em 0 0 0.5em; 
 }
 
 #buscar{
-	
+	font-family: 'Share Tech', sans-serif;
 	margin: .5em 0 0.2em 1em;
 	padding: .2em 1em 0.2em 0;
 	/*border-radius: 0.5em;*/
 }
 
+
+#email{
+	
+	margin: .5em 0 0.2em 1em;
+	padding: .2em 1em 0.2em 0;
+	/*border-radius: 0.5em;*/
+}
 #owl-demo{
 
 	margin-top: 0.5em;
@@ -360,10 +387,98 @@ nav ul li a{
 }
 
 
+.contacto{
+	font-family: 'Share Tech', sans-serif;
+    border: 1px solid #CED5D7;
+    border-radius: 6px;
+    padding: 45px 45px 20px;
+    margin-top: 50px;
+    background-color: white;
+    opacity:0.5
+}
+.contacto label{
+    display: block;
+    font-weight: bold;
+}
+.contacto div{
+    margin-bottom: 15px;
+}
+.contacto input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #583400;
+    resize: none;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus{
+    outline: none;
+    box-shadow:0 0 0 3px #dde9ec;
+}
+.contacto input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 1px #1C1000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+ 	font-family: 'Share Tech', sans-serif;
+    background: #ffe9b6;
+    background: -moz-linear-gradient(top, #ffe9b6 0%, #dbc69a 100%);
+    background: -webkit-linear-gradient(top, #ffe9b6 0%,#dbc69a 100%);
+}
+.contacto input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #c67f02 50%, #dbc69a 100%);
+    background: -webkit-linear-gradient(top, #c67f02 50%,#dbc69a 100%);
+}
+.contacto input[type='submit']:active{
+    background: #fcc159;
+    background: -moz-linear-gradient(top, #fcc159 50%, #c67f02 100%);
+    background: -webkit-linear-gradient(top, #fcc159 50%,#c67f02 100%);
+}
 
+.nav_admin{
 
+	margin: 1em 0 0 0;
+	
+	
+}
+.nav_admin ul{
 
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
 
+.nav_admin ul li{
 
+	display: inline-block;
+	margin: 0.7em 0.5em 0 0;
+}
 
+.nav_admin ul li .inmuebles{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #583400;
+	display: block;
+	padding: 0.3em 2em 0.2em 2em;
+	text-decoration: none;
+	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
+	font-size: 2em;
+	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
+	background: #FFE188;
+	border-radius: 0.5em;
+}
+.nav_admin ul li .noticias {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #1E1E1E;
+	display: block;
+	padding: 0.3em 2em 0.2em 2em;
+	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
+	text-decoration: none;
+	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
+	font-size: 2em;
+	background: #FFE188;
+	border-radius: 0.5em;
+}
 

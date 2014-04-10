@@ -6,7 +6,7 @@
 	<meta name="description" content="El hogar de los inmuebles">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	
-	<title>Pulse | Inmuebles</title>
+	<title>Terraza | Inmuebles</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
@@ -15,6 +15,7 @@
 	<!-- start fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
 	<!-- end fonts -->
 </head>
 
@@ -27,14 +28,17 @@
 	<?php include ("buscador.php"); ?>
 	<!--end buscador -->
 
-	<section class="item">
-			<h1> Contacto </h1>
-			
-			<div class="precio_item">
-				Tel: (01)123-4567
-			</div>
-	</section>
-
+ <h1> Contacto </h1>
+       <form class='contacto' action="enviar.php" method="POST">
+            <div><label>Nombre:</label><input type='text' value='nombre' required></div>
+            <div><label>E-mail:</label><input type='text' value='mail' required></div>
+            <div><label>Teléfono:</label><input type='text' value='telefono' ></div>
+            <div><label>Mensaje:</label><textarea rows='6' value='mensaje' required></textarea></div>
+            <div><input type='submit' value='Enviar'></div>
+        </form>
+    </body>
+</html>
+	</form>
 	<!-- end recientes -->
 
 	<!-- start footer -->

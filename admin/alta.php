@@ -81,7 +81,7 @@
     </div>
   	<div class="item">
     
-<<<<<<< HEAD
+
       <label>Localidad del Inmueble</label><br>
   <label class="selection">
     <select name="localidad" id="localidad" class="selector">
@@ -102,8 +102,6 @@
 
     <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
       <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
-=======
->>>>>>> 38c2cf40a1fdfd606485ceaa818f88b76a1a525f
 
 	  
   	<div class="item">

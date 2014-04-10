@@ -65,7 +65,7 @@ label{
 	background: white;
 	border-radius: 0 0 0.5em 0.5em;
 	left: 3%;
-	margin-top: 0.2em;  
+	margin-top: 0.5em;  
 	padding: 0.5em 1em;
 	position: absolute;
 	right: 3%;
@@ -74,7 +74,7 @@ label{
 }
 
 #consulta .item .datos_persona .nombre{
-	
+	float: left;
 	text-decoration: none;
 	color: #000;
 }

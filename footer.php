@@ -1,5 +1,5 @@
 <footer>
 	<p>
-		<strong>Pulse 2014</strong>
+		<strong>Todos los derechos Reservados &#169;Terraza</strong>
 	</p>
 </footer>

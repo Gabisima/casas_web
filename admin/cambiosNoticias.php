@@ -68,7 +68,7 @@
   
   <div class="item">
     <label>Confirmar Email</label>
-    <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)" value=<?php echo $row->email; ?>
+    <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)" value=<?php echo $row->email; ?>>
     </div>
   
   <div class="item">
@@ -101,10 +101,11 @@
       <div id="dropbox" name="drop">
               <span class="message">Arrastra aquí las fotografías de tu propiedad<br /><i>(sólo puedes subir 3 fotos como máximo)</i></span>
       </div>
-
+    </div>
+  <div class="item">
       <label>Liga a video de YouTube</label>
       <input type="url" name="video" size="30" maxlength="100" required placeholder="https://www.youtube.com/watch?v=lxgelwqe8-E" value=<?php echo $row->video; ?>
-
+      </div>
           <!-- Including The jQuery Library -->
       <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
       
@@ -233,19 +234,20 @@
     <div class="item">
     <input type="text" name="area" id="area" />
     <label>Archivos de Fotografías</label>
-    <input type="text" name="foto1"  value="<?php echo $row->foto1; ?>"/>
+    <input type="text" name="foto1" id="foto1" value="<?php echo $row->foto1; ?>"/>
     </div>
   
   <div class="item">
-    <input type="text" name="foto2"  value="<?php echo $row->foto2; ?>"/>
+    <input type="text" name="foto2" id="foto2"  value="<?php echo $row->foto2; ?>"/>
     </div>
   
   <div class="item">
-    <input type="text" name="foto3" value="<?php echo $row->foto3; ?>" />
+    <input type="text" name="foto3" id="foto3" value="<?php echo $row->foto3; ?>" />
     </div>
   
   <div class="item">
     <input type="submit" value="Publicar" id="enviar" name="enviar" onclick="content()" /> 
+  </div>
   </div>
     </form>
     
@@ -260,7 +262,7 @@
   }
   </script>
   <?php } }?>
-</div>
+
 <?php
 //Inserción de datos
 if(isset($_POST['enviar'])){

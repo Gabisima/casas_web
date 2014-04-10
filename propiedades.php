@@ -7,6 +7,7 @@
 	<head>
  		<meta charset="utf-8">
  		<meta name="description" content="El hogar de los inmuebles">
+ 		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
  		<title>Propiedades | Terraza</title>
  		<link rel="stylesheet" href="css/normalize.css">
  		<link rel="stylesheet" href="css/estilos.css">

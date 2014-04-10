@@ -10,6 +10,7 @@
 ?>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
         <title>Busqueda | Terraza</title>
         <link rel="stylesheet" href="../css/normalize.css">
         <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->

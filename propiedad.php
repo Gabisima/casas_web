@@ -3,6 +3,7 @@
 <head>
 	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	<title>Propiedad | Terraza</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -99,7 +100,7 @@
 				<p class="direccion">Dirección: <?php echo utf8_encode ($row->direccion);?></p>
 			</div>
 			<div class="descripcion_precio">
-				$<?php echo utf8_encode ($row->precio);?> <?php echo $row->unidad;?>
+				$ <?php echo utf8_encode ($row->precio);?> <?php echo $row->unidad;?>
 			</div>
 			
 			<div class="descripcion_tipo">

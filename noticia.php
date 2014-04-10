@@ -3,6 +3,7 @@
 <head>
 	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	<title>Noticia | Terraza </title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -95,7 +96,7 @@
 				<?php  echo utf8_encode ($row->noticia);?>
 			</div>
 			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
-				width="100%" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>
+				width="98%" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>
 			</iframe>
 			<div class="datos_persona">
 				<a href="#" class="autor"><?php echo utf8_encode ($row->autor);?></a>

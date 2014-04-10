@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin | Terraza</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/estilos.css">
+	<link rel="stylesheet" href="css/admin.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
@@ -24,13 +26,13 @@
 				</li> -->
 
 				<li>
-					<a href="alta.php" class="inmuebles">Inmuebles</a>
+					<a href="alta.php" class="inmuebles">Inmueble</a>
 					
 				</li>
 
 				<li>
 				<!-- se puede usar <li id ="propiedades">  para destacar  -->
-					<a href="altaNoticia.php" class="noticias">Noticias</a>
+					<a href="altaNoticia.php" class="noticias">Noticia</a>
 					
 				</li>
 

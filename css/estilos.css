@@ -3,6 +3,7 @@ a{
 }
 
 body{
+	font-family: 'Ubuntu Condensed', sans-serif;
 	background-image: url('../images/background_2_.png');
 	background-repeat : repeat;
 }
@@ -27,7 +28,6 @@ h1
 header{
 
 	background : #662C1E;
-  	background : rgba(102, 44, 30, 1);
 	color: white;
 	overflow: hidden;
 	padding: 0.5em;
@@ -64,13 +64,6 @@ header #logo img{
 	
 }
 
-label {
-	padding: 0 0 0 0.5em;
-	color: #000000;
-	font-family: 'Maven Pro', sans-serif;
- 	font-size : 1em;	
-}
-
 nav{
 
 	margin 0;
@@ -85,9 +78,7 @@ nav ul{
 
 nav ul #propiedades{
 
-	/*background: #009DA6;*/
 	border-radius: 0.3em;
-
 }
 
 nav ul li{
@@ -104,54 +95,6 @@ nav ul li a{
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
 
-
-
-.tabs{
-
-	background: olive;
-	margin: 0;
-	
-}
-.tabs ul{
-
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.tabs ul li{
-
-	display: inline-block;
-	margin: 0 1em 0 1em;
-
-}
-
-.tabs ul li #active{
-	background: #519244;
-	border-bottom: 0.1em;
-	color: white;
-	padding: 0 0.2em 0 0.2em;
-}
-
-
-.tabs ul li a{
-	font-family: 'Ubuntu Condensed', sans-serif;
-	color: white;
-	text-decoration: none;
-}
-
-
-.inmueble img{
-
-	height: 130px;
-	width: 200px;
-}
-
-.youtube-player {
-	display: block;
-	margin: 0 auto;
-}
-
 #contenido{
 
 	margin: 1em;
@@ -159,18 +102,10 @@ nav ul li a{
 
 }
 
-.textInput {
-	border-radius: 2em;
-	background: #ffffff;
-	color: #000000;
-	padding: 0.6em;
-	font-size: .8em; 
-	font-family: 'Share Tech', sans-serif;
-}
-
 #contenido .descripcion{
 
 	background: white;
+	padding: 0.2em 0 0.4em 0;
 	margin-bottom: 3em;
 	border-radius: 0.5em;
 	border-bottom: 3px solid #662C1E;
@@ -319,7 +254,7 @@ nav ul li a{
 #buscador{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	display: block;
-	background: #D6CCBD;
+	background: #F5F5F5;
 	padding: 0 0 0.2em 0;
 	position: relative;
 	overflow: hidden;
@@ -369,6 +304,61 @@ nav ul li a{
   display: block;
   height: 200px;
   width: 100%;
+}
+
+.tabs{
+
+	background: olive;
+	margin: 0;
+	
+}
+.tabs ul{
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tabs ul li{
+
+	display: inline-block;
+	margin: 0 1em 0 1em;
+
+}
+
+.tabs ul li #active{
+	background: #519244;
+	border-bottom: 0.1em;
+	color: white;
+	padding: 0 0.2em 0 0.2em;
+}
+
+
+.tabs ul li a{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
+
+.inmueble img{
+
+	height: 130px;
+	width: 200px;
+}
+
+.textInput {
+	border-radius: 2em;
+	background: #ffffff;
+	color: #000000;
+	padding: 0.6em;
+	font-size: .8em; 
+	font-family: 'Share Tech', sans-serif;
+}
+
+.youtube-player {
+	display: block;
+	margin: 0 auto;
 }
 
 .mapa{
@@ -436,51 +426,6 @@ nav ul li a{
     background: #fcc159;
     background: -moz-linear-gradient(top, #fcc159 50%, #c67f02 100%);
     background: -webkit-linear-gradient(top, #fcc159 50%,#c67f02 100%);
-}
-
-.nav_admin{
-
-	margin: 1em 0 0 0;
-	
-	
-}
-.nav_admin ul{
-
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.nav_admin ul li{
-
-	display: inline-block;
-	margin: 0.7em 0.5em 0 0;
-}
-
-.nav_admin ul li .inmuebles{
-	font-family: 'Ubuntu Condensed', sans-serif;
-	color: #583400;
-	display: block;
-	padding: 0.3em 2em 0.2em 2em;
-	text-decoration: none;
-	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
-	font-size: 2em;
-	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
-	background: #FFE188;
-	border-radius: 0.5em;
-}
-.nav_admin ul li .noticias {
-	font-family: 'Ubuntu Condensed', sans-serif;
-	color: #1E1E1E;
-	display: block;
-	padding: 0.3em 2em 0.2em 2em;
-	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
-	text-decoration: none;
-	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
-	font-size: 2em;
-	background: #FFE188;
-	border-radius: 0.5em;
 }
 
 .result_fail{

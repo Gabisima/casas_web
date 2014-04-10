@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/normalize.css">
-		<link rel="stylesheet" href="../css/estilos.css">
+		<!-- <link rel="stylesheet" href="../css/estilos.css"> -->
 </head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />

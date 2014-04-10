@@ -368,8 +368,8 @@ nav ul li a{
 
 .nav_admin{
 
-	margin: 0;
-	background: white;
+	margin: 1em 0 0 0;
+	
 	
 }
 .nav_admin ul{
@@ -392,19 +392,23 @@ nav ul li a{
 	display: block;
 	padding: 0.3em 2em 0.2em 2em;
 	text-decoration: none;
-	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
 	font-size: 2em;
+	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
 	background: #FFE188;
+	border-radius: 0.5em;
 }
 .nav_admin ul li .noticias {
 	font-family: 'Ubuntu Condensed', sans-serif;
 	color: #1E1E1E;
 	display: block;
 	padding: 0.3em 2em 0.2em 2em;
+	box-shadow: rgba(0,0,0,0.5) 5px 10px 5px;
 	text-decoration: none;
-	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
 	font-size: 2em;
-	background: #D6CCBD;
+	background: #FFE188;
+	border-radius: 0.5em;
 }
 
 

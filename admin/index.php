@@ -7,8 +7,11 @@
 	<link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-	<?php include('../header.php'); ?>
+	<?php include('header-admin.php'); ?>
 	<?php include('buscador-admin.php'); ?>
+	<div class="message_error">
+		Qué deseas publicar?
+	</div>
 	<div class="nav_admin">
 			<ul>
 
@@ -29,9 +32,6 @@
 
 			</ul>
 
-	</div>
-	<div class="message_error">
-		Selecciona una opción o busca con tu correo
 	</div>
 
 

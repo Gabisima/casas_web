@@ -29,12 +29,12 @@
 	<!--end buscador -->
 
  <h1> Contacto </h1>
-       <form class='contacto' action="enviar.php" method="POST">
+       <form class='contacto' action='' method="POST">
             <div><label>Nombre:</label><input name='nombre' type='text' value='nombre' required></div>
             <div><label>E-mail:</label><input name='mail' type='text' value='mail' required></div>
             <div><label>Teléfono:</label><input name='telefono' type='text' value='telefono' ></div>
             <div><label>Mensaje:</label><textarea name='mensaje' rows='6' value='mensaje' required></textarea></div>
-            <div><input type='submit' value='Enviar'></div>
+            <div><input type='button' value='Enviar' onClick='alert("Mensaje enviado exitosamente!")'></div>
         </form>
     </body>
 </html>

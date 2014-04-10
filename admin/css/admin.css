@@ -1,0 +1,26 @@
+label{
+
+	/*display: block;*/
+	margin-bottom: 0.5em;
+	/*border-top: 1px solid black;*/
+}
+
+
+
+
+
+.contenedor{
+	margin-top: 1em;
+	padding-left: 1em;
+	font-size: 1.2em;
+	/*background: white;*/
+}
+
+.item{
+
+	/*background: white;*/
+	display: block;
+	text-align: left;
+	margin-bottom: 0.3em;
+
+}

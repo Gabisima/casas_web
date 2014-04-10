@@ -3,7 +3,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/normalize.css">
-		<!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+		<link rel="stylesheet" href="../css/estilos.css">
+		<link rel="stylesheet" href="css/admin.css">
 </head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
@@ -34,113 +35,131 @@
 		    selector: "textarea"
 		 });
 		</script>
-       	<link rel="stylesheet" href="css/stylesheet.css?v=2">
+       	<!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
    
 	</head>
 	<body>
-		<?php include('../header.php'); ?>
+		<?php include('header-admin.php'); ?>
 	<?php include('buscador-admin.php'); ?>
+	
+	<div class="contenedor">
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
-
-  <label>Nombre Completo</label>
-  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
-
-  <label>Email</label>
-  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
-
-  <label>Confirmar Email</label>
-  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
-
-  <label>Teléfono </label><label id="opcional">(Opcional)</label>
-  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)">
-  
-  <label>Título de la Publicación</label>
-  <input type="text" name="titulo" placeholder="Vendo casa de 4 habitaciones en Miramontes" size="30" maxlength="70" required>
-  
-  <label>Tipo de Inmueble</label><br>
-  <label class="selection">
-    <select name="tipo" id="tipo" class="selector">
-    <?php 
-		$sql = mysql_query("SELECT * FROM TIPOS");
-		while($row = mysql_fetch_object($sql))
-		{
-	?>
-    	<option value="<?php echo $row->tipo;?>"><?php echo utf8_encode($row->tipo);?></option>
-    <?php } ?>
-    </select></label>
+	
+	<div class="item">
+	  <label>Nombre Completo</label>
+	  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
+	</div>
+	
+	<div class="item">
+	  <label>Email</label><br>
+	  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
+	</div>
+	<div class="item">
+	  <label>Confirmar Email</label>
+	  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
+	</div>
+	<div class="item">
+	  <label>Teléfono </label><label id="opcional">(Opcional)</label>
+	  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)">
+  	</div>
+  	<div class="item">
+	  <label>Título de la Publicación</label>
+	  <input type="text" name="titulo" placeholder="Vendo casa de 4 habitaciones en Miramontes" size="30" maxlength="70" required>
+  	</div>
+  	<div class="item">
+	  <label>Tipo de Inmueble</label><br>
+	  <label class="selection">
+	    <select name="tipo" id="tipo" class="selector">
+	    <?php 
+			$sql = mysql_query("SELECT * FROM TIPOS");
+			while($row = mysql_fetch_object($sql))
+			{
+		?>
+	    	<option value="<?php echo $row->tipo;?>"><?php echo utf8_encode($row->tipo);?></option>
+	    <?php } ?>
+	    </select></label>
+    </div>
+  	<div class="item">
     
-      <label>Localidad del Inmueble</label><br>
-  <label class="selection">
-    <select name="localidad" id="localidad" class="selector">
-    <?php 
-		$sql = mysql_query("SELECT * FROM ESTADOS");
-		while($row = mysql_fetch_object($sql))
-		{
-	?>
-    	<option value="<?php echo $row->estado;?>"><?php echo utf8_encode($row->estado);?></option>
-    <?php } ?>
-    </select></label>
+	  <label>Localidad del Inmueble</label><br>
+	  <label class="selection">
+	    <select name="localidad" id="localidad" class="selector">
+	    <?php 
+			$sql = mysql_query("SELECT * FROM ESTADOS");
+			while($row = mysql_fetch_object($sql))
+			{
+		?>
+	    	<option value="<?php echo $row->estado;?>"><?php echo utf8_encode($row->estado);?></option>
+	    <?php } ?>
+	    </select></label>
+    </div>
+  	<div class="item">
 
-  <label>Dirección del Inmueble</label>
-        <iframe height="400px" width="800px" frameBorder="0" scrolling="no"
-        src="maps.php" id="direccion" name="direccion">
-    </iframe>
+	  <label>Dirección del Inmueble</label>
+	        <iframe height="400px" width="95%" frameBorder="0" scrolling="no"
+	        src="maps.php" id="direccion" name="direccion">
+	    </iframe>
+    </div>
+  	<div class="item">
 
-  <label>Superficie del Inmueble (En metros cuadrados)</label>
-  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
-  
-  <label>Precio del Inmueble</label><br>
-  <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price">
-    <label class="etiqueta">
-    <select name="precio" id="precio" class="selector">
-    <?php 
-		$sql = mysql_query("SELECT * FROM UNIDADES");
-		while($row = mysql_fetch_object($sql))
-		{
-	?>
-    	<option value="<?php echo $row->unidad;?>"><?php echo utf8_encode($row->unidad);?></option>
-    <?php } ?>
-    </select></label>
-<script>
-function content() {
-  var contenido = tinyMCE.get("descripcion").getContent();
-    alert(contenido);
-   document.getElementById("area").value = contenido;
-}
-</script>
-
- <br>
-    <label>Descripción del Inmueble</label><br>
-    <textarea name="descripcion" style="width:100%; height:240px" id="descripcion" ></textarea>
-        <a href="#" id="link">Guardar Cambios</a>
- 	<div id="update"></div>
- 
-    <script type="text/javascript">
-        content();
-        alert(content);      
-        document.getElementById("link").onclick = function () {            
-            // ajax start
-            var xhr;
-            if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // all browsers
-            else xhr = new ActiveXObject("Microsoft.XMLHTTP");     // for IE
- 
-            var url = 'process.php?content=' + content;
-            xhr.open('GET', url, false);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState===4 && xhr.status===200) {
-                    var div = document.getElementById('update');
-                    div.innerHTML = xhr.responseText;
-                }
-            }
-            xhr.send();
-            // ajax stop
-            return false;
-        }
-    </script>    
-
-  <br><label>Fotografías</label>
+	  <label>Superficie del Inmueble (En metros cuadrados)</label>
+	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
+  	</div>
+  	<div class="item">
+	  <label>Precio del Inmueble</label><br>
+	  <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price">
+	    <label class="etiqueta">
+	    <select name="precio" id="precio" class="selector">
+	    <?php 
+			$sql = mysql_query("SELECT * FROM UNIDADES");
+			while($row = mysql_fetch_object($sql))
+			{
+		?>
+	    	<option value="<?php echo $row->unidad;?>"><?php echo utf8_encode($row->unidad);?></option>
+	    <?php } ?>
+	    </select></label>
+		<script>
+		function content() {
+		  var contenido = tinyMCE.get("descripcion").getContent();
+		    alert(contenido);
+		   document.getElementById("area").value = contenido;
+		}
+		</script>
+	</div>
+  	<div class="item">
+	 	<br>
+	    <label>Descripción del Inmueble</label><br>
+	    <textarea name="descripcion" style="width:80%; height:240px" id="descripcion" ></textarea>
+	        
+	 	<div id="update"></div>
+	 
+	    <script type="text/javascript">
+	        content();
+	        alert(content);      
+	        document.getElementById("link").onclick = function () {            
+	            // ajax start
+	            var xhr;
+	            if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // all browsers
+	            else xhr = new ActiveXObject("Microsoft.XMLHTTP");     // for IE
+	 
+	            var url = 'process.php?content=' + content;
+	            xhr.open('GET', url, false);
+	            xhr.onreadystatechange = function () {
+	                if (xhr.readyState===4 && xhr.status===200) {
+	                    var div = document.getElementById('update');
+	                    div.innerHTML = xhr.responseText;
+	                }
+	            }
+	            xhr.send();
+	            // ajax stop
+	            return false;
+	        }
+	    </script>    
+	</div>
+  	<div class="item">
+  		<br><label>Fotografías</label>
     <div id="dropbox" name="drop">
-            <span class="message">Arrastra aquí las fotografías de tu propiedad<br /><i>(sólo puedes subir 3 fotos como máximo)</i></span>
+        <span class="message">Arrastra aquí las fotografías de tu propiedad<br /><i>(sólo puedes subir 3 fotos como máximo)</i></span>
     </div>
     
 
@@ -279,22 +298,31 @@ function content() {
 });
 
 </script>
+ </div>
 
   <input type="submit" value="Publicar" id="enviar" name="enviar" onclick="content()" /> 
+  	<div class="item">
       <input type="text" name="area" id="area" />
+       </div>
+  	<div class="item">
       <input type="text" name="foto1" id="foto1"/>
+       </div>
+  	<div class="item">
       <input type="text" name="foto2" id="foto2" />
+       </div>
+  	<div class="item">
       <input type="text" name="foto3" id="foto3" />
+       </div>
+
   </form>
 
-    <button onclick="content()" id="butt">Get content</button>
  <?php
      if (isset($_GET['js_var'])) $php_var = $_GET['js_var'];
         else $php_var = "<br />content is not set!";
  
         echo $php_var;
  ?>
-
+</div>
 
 
  <?php

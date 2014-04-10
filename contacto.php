@@ -15,6 +15,7 @@
 	<!-- start fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
 	<!-- end fonts -->
 </head>
 
@@ -26,61 +27,18 @@
 	<!--start buscador -->
 	<?php include ("buscador.php"); ?>
 	<!--end buscador -->
-<?php
-
-
-include 'contact.php';
-
-if(isset($_POST) & !empty($_POST)){
-
-$s = send_email($name,$email,$subject,$phone,$message); 
-}
- ?>
 
  <h1> Contacto </h1>
- <div id="formwrap">
-	
-	<form action="MAILTO:uribe.gabs@gmail.com" method="post" enctype="text/plain">	
-			<div class="precio_item">
-				<label id="nombre"> Nombre completo*: </label>
-				<input name="nombre" type="textbox" id="nombre" required>
-			</div>
-			<div class="precio_item">
-				<label id="telefono">Teléfono*: </label>
-				<input name="telefono" type="textbox" id="telefono" required>
-			</div>
-			<div class="precio_item">
-				<label id="mail">E-Mail: </label>
-				<input name="mail" type="textbox" id="mail">
-			</div>
-			<div class="precio_item">
-				<label id="direccion">Dirección: </label>
-				<input name="direccion" type="textbox" id="direccion">
-			</div>
-			<div class="precio_item">
-				<label id="comentario">Comentario*: </label>
-				<input name="comentario" type="textbox" id="comentario" required>
-			</div>
-			<div>
-				<input name="submit" type="submit" id="submit"value="Enviar" value="Go" onclick="return confirm('Confirme envío')">
-				<input type="reset" value="Borrar">
-			</div>
+       <form class='contacto' action="enviar.php" method="POST">
+            <div><label>Nombre:</label><input type='text' value='nombre' required></div>
+            <div><label>E-mail:</label><input type='text' value='mail' required></div>
+            <div><label>Teléfono:</label><input type='text' value='telefono' ></div>
+            <div><label>Mensaje:</label><textarea rows='6' value='mensaje' required></textarea></div>
+            <div><input type='submit' value='Enviar'></div>
+        </form>
+    </body>
+</html>
 	</form>
-	</div>
-            <div id="success">
-				<?php
-				if(isset($s)){
-					if($s['mail'] == 1){
-						//Your success message here
-						echo "Email Sent";
-					}else{
-						//Failure Message Here
-						echo "Email failed";
-					}
-				}
-				?>
-			</div>
-
 	<!-- end recientes -->
 
 	<!-- start footer -->

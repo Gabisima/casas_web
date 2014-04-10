@@ -81,81 +81,7 @@
     </div>
   	<div class="item">
     
-<<<<<<< HEAD
-      <label>Localidad del Inmueble</label><br>
-  <label class="selection">
-    <select name="localidad" id="localidad" class="selector">
-    <?php 
-		$sql = mysql_query("SELECT * FROM ESTADOS");
-		while($row = mysql_fetch_object($sql))
-		{
-	?>
-    	<option value="<?php echo $row->estado;?>"><?php echo utf8_encode($row->estado);?></option>
-    <?php } ?>
-    </select></label>
 
-  <label>Dirección del Inmueble</label>
-        <iframe height="400px" width="800px" frameBorder="0" scrolling="no"
-        src="maps.php" id="direccion" name="direccion">
-    </iframe>
-
-    <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
-      <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
-
-  <label>Superficie del Inmueble (En metros cuadrados)</label>
-  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
-  
-  <label>Precio del Inmueble</label><br>
-  <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price">
-    <label class="etiqueta">
-    <select name="unidad" id="unidad" class="selector">
-    <?php 
-		$sql = mysql_query("SELECT * FROM UNIDADES");
-		while($row = mysql_fetch_object($sql))
-		{
-	?>
-    	<option value="<?php echo $row->unidad;?>"><?php echo utf8_encode($row->unidad);?></option>
-    <?php } ?>
-    </select></label>
-<script>
-function content() {
-  var contenido = tinyMCE.get("descripcion").getContent();
-    alert(contenido);
-   document.getElementById("area").value = contenido;
-}
-</script>
-
- <br>
-    <label>Descripción del Inmueble</label><br>
-    <textarea name="descripcion" style="width:100%; height:240px" id="descripcion" ></textarea>
- 	<div id="update"></div>
- 
-    <script type="text/javascript">
-        content();
-        alert(content);      
-        document.getElementById("link").onclick = function () {            
-            // ajax start
-            var xhr;
-            if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // all browsers
-            else xhr = new ActiveXObject("Microsoft.XMLHTTP");     // for IE
- 
-            var url = 'process.php?content=' + content;
-            xhr.open('GET', url, false);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState===4 && xhr.status===200) {
-                    var div = document.getElementById('update');
-                    div.innerHTML = xhr.responseText;
-                }
-            }
-            xhr.send();
-            // ajax stop
-            return false;
-        }
-    </script>    
-
-
-  <br><label>Fotografías</label>
-=======
 	  <label>Localidad del Inmueble</label><br>
 	  <label class="selection">
 	    <select name="localidad" id="localidad" class="selector">
@@ -233,7 +159,7 @@ function content() {
 	</div>
   	<div class="item">
   		<br><label>Fotografías</label>
->>>>>>> index-admin
+
     <div id="dropbox" name="drop">
         <span class="message">Arrastra aquí las fotografías de tu propiedad<br /><i>(sólo puedes subir 3 fotos como máximo)</i></span>
     </div>
@@ -391,18 +317,6 @@ function content() {
        </div>
 
   </form>
-
-<<<<<<< HEAD
-=======
- <?php
-     if (isset($_GET['js_var'])) $php_var = $_GET['js_var'];
-        else $php_var = "<br />content is not set!";
- 
-        echo $php_var;
- ?>
-</div>
->>>>>>> index-admin
-
 
  <?php
 //Inserción de Datos

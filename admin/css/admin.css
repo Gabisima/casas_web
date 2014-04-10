@@ -1,0 +1,107 @@
+label{
+
+	/*display: block;*/
+	margin-bottom: 0.5em;
+	padding: 0.1em;
+	/*background: red;*/
+	/*border-top: 1px solid black;*/
+}
+
+#consulta{
+
+	margin: 1em;
+}
+
+#consulta .item{
+
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background: white;
+	border-bottom: 3px solid #662C1E;
+	margin-bottom: 3em;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+	/*overflow: hidden;*/
+}
+#consulta .item .datos_item{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	text-align: right;
+
+}
+#consulta .item .datos_item .tipo{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background: #885015;
+	color: white;
+	display: inline-block;
+	margin: 0 .3em .1em 0;
+	padding: 0.5em;
+	text-decoration: none;
+}
+#consulta .item .estado_item{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #aaa;
+}
+#consulta .item .imagen_item{
+
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+#consulta .item .imagen_item img{
+	margin: 0.2em 0 0 0.2em;
+	width: 96px;
+	height: 125px;
+}
+
+#consulta .item .titulo_item{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+}
+
+#consulta .item .titulo_item a{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #444;
+	text-decoration: none;
+}
+
+#consulta .item .datos_persona{
+
+	background: white;
+	border-radius: 0 0 0.5em 0.5em;
+	left: 3%;
+	margin-top: 0.2em;  
+	padding: 0.5em 1em;
+	position: absolute;
+	right: 3%;
+	/*top: 100%;*/
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+}
+
+#consulta .item .datos_persona .nombre{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	text-decoration: none;
+	color: #000;
+}
+#consulta .item .datos_persona .correo{
+	float: right;
+	color: #000;
+	text-decoration: none;
+}
+
+
+.contenedor{
+	margin-top: 1em;
+	padding-left: 0.5em;
+	font-size: 1.2em;
+	/*background: white;*/
+}
+
+.item{
+
+	/*background: white;*/
+	display: block;
+	text-align: left;
+	margin: 0.3em 0.2em 0.2em 0.2em;
+
+}
+
+

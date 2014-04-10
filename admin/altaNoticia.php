@@ -4,6 +4,9 @@
 	<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="css/admin.css">
 		<title>Dynasty | Publicar</title>
         
    <!-- Change Div Function -->
@@ -33,21 +36,32 @@
 		</script>
 
     <!-- General CSS File-->
-    <link rel="stylesheet" href="css/stylesheet.css?v=2">
+    <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
    
 	</head>
+  <body>
+
+    <?php include('header-admin.php'); ?>
+    <?php include('buscador-admin.php'); ?>
 <form action="altaNoticia.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
+
+  <div class="item">
 <label>Autor</label>
   <input type="text" id="autor" name="autor" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
-
+</div>
+  <div class="item">
   <label>Email</label>
   <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
-
+</div>
+  <div class="item">
   <label>Confirmar Email</label>
   <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
+  </div>
+  <div class="item">
   <label>Título de la Noticia</label>
   <input type="text" name="titulo" placeholder="Microsoft compra un nuevo edificio en Querétaro" size="30" maxlength="70" required>
-
+</div>
+  <div class="item">
   <label>Fecha de la Noticia</label>
   <input type = "date" name = "fecha" size = "20" maxlength = "50" required pattern="[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}" placeholder="DD/MM/YYYY" title="DD/MM/YYYY (No olvides los guiones)">
 
@@ -58,19 +72,24 @@ function content() {
 }
 </script>
 
- <br>
+</div>
+  <div class="item">
     <label>Noticia</label><br>
     <textarea name="noticia" style="width:100%; height:240px" id="noticia"></textarea>
     
 
-  <br><label>Fotografías</label>
+</div>
+  <div class="item">
+    <label>Fotografías</label>
     <div id="dropbox" name="drop">
             <span class="message">Arrastra aquí las fotografías de tu propiedad<br /><i>(sólo puedes subir 3 fotos como máximo)</i></span>
     </div>
+    </div>
+  <div class="item">
 
     <label>Liga a video de YouTube</label>
     <input type="url" name="video" size="30" maxlength="100" required placeholder="https://www.youtube.com/watch?v=lxgelwqe8-E">
-
+</div>
         <!-- Including The jQuery Library -->
     <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
     
@@ -195,10 +214,19 @@ function content() {
 
 </script>
 
+  <div class="item">
   <input type="submit" value="Publicar" id="enviar" name="enviar" onclick="content()" /> 
+  </div>
+  <div class="item">
   <input type="text" name="area" id="area" />
+  </div>
+  <div class="item">
   <input type="text" name="foto1" id="foto1"/>
+  </div>
+  <div class="item">
   <input type="text" name="foto2" id="foto2"/>
+  </div>
+  <div class="item">
    <input type="text" name="foto3" id="foto3" />
   </form>
   
@@ -235,4 +263,5 @@ if(isset($_POST['enviar'])){
 ?>
 <?php } ?>
 <p>Datos Insertados</p>
+</body>
 </html>

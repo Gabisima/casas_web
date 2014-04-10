@@ -11,50 +11,111 @@
     <head>
         <meta charset="utf-8">
         <title>Dynasty | Consultar</title>
-        <link rel="stylesheet" href="css/stylesheet.css?v=2">
-        <style>
-			body{
-				width:1200px;
-			}
-        </style>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="css/admin.css">
     </head>
     <body>
-    <form action="buscar.php" method="post" enctype="multipart/form-data">
+        <?php include('header-admin.php'); ?>
+        <?php include('buscador-admin.php'); ?>
+    <!-- <form action="buscar.php" method="post" enctype="multipart/form-data">
     <div align="center">
     Búsqueda Por Email
     <input name="email" type="text" id="email" />
-    <input name="Enviar" type="submit" id="Enviar" value="Enviar"/></div></form>
-    	<table width="100%" border="1">
-          <tr class="head">
-            <td>Foto</td>
-            <td>Título</td>
-            <td>Autor</td>
-            <td>Email</td>
-            <td>Fecha</td>
-            <td>Video</td>
-          </tr>
-         <?php 
-		 	$email = @$_POST['email'];
-		 	$sql = @mysql_query ("SELECT * FROM noticias WHERE email like '%$email%'");
-			
-			while($row = mysql_fetch_object($sql)){
-		 ?>
-          <tr class="corpse">
-            <td><img src="uploads/<?php echo $row->foto1; ?>"height="250" width="250" /></td>
-            <td><?php echo $row->titulo; ?></td>
-            <td><?php echo $row->autor; ?></td>
-            <td><?php echo $row->email; ?></td>
-            <td><?php echo $row->fecha; ?></td>
-            <td><?php echo $row->video; ?></td>
-            <td>
-            <a id="borrar" href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>">Modificar</a></td>
-            <td><a href="borrar.php?id=<?php echo $row->id ?>">Borrar</a></td>
-          <!--   <td><button id = "boton" name="enviar" value="borrar">
-                Eliminar
-            </button></td> -->
-          </tr>
-		  <?php } ?>
+    <input name="Enviar" type="submit" id="Enviar" value="Enviar"/></div></form> -->
 
-        </table>
+    <section id="consulta">
+    <?php 
+        $email = @$_POST['email'];
+        $i =0;
+        $sql = @mysql_query ("SELECT * FROM noticias WHERE email like '%$email%'");
+        
+        while($row = mysql_fetch_object($sql)){
+        $i++
+    ?>  
+        <?php if ($i<=6) {  
+        ?>
+        <article class="item">
+            <figure class="imagen_item">
+                <a href="propiedad.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
+            </figure>
+            <h2 class="titulo_item">
+                <a href="propiedad.php?id=<?php echo $row->id;?>">
+                    <?php echo $row->titulo;?>
+                </a>
+            </h2>
+
+            <div class="estado_item">
+                <?php echo $row->autor; ?>
+            </div>
+            
+            <div class="precio_item">
+                <?php echo $row->email; ?> 
+            </div>
+                <?php echo $row->video; ?>
+            <div class="datos_item">
+                <a href="#" class="tipo"><?php echo $row->fecha; ?></a>
+            </div>
+            <div class="datos_persona">
+                <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
+                <a href="borrar.php?id=<?php echo $row->id ?>" class="correo">Borrar</a>
+                
+            </div>
+
+        </article>
+        <?php }?>
+    <?php } ?>
+        
+
+    <!-- casas -->
+
+    
+    <?php 
+        $email = @$_POST['email'];
+        $i =0;
+        $sql = @mysql_query ("SELECT * FROM inmuebles WHERE email like '%$email%'");
+        
+        while($row = mysql_fetch_object($sql)){
+        $i++
+    ?>  
+        <?php if ($i<=6) {  
+        ?>
+        <article class="item">
+            <figure class="imagen_item">
+                <a href="propiedad.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
+            </figure>
+            <h2 class="titulo_item">
+                <a href="propiedad.php?id=<?php echo $row->id;?>">
+                    <?php echo $row->titulo;?>
+                </a>
+            </h2>
+
+            <div class="estado_item">
+                $<?php echo $row->precio; ?> <?php echo $row->unidad; ?>
+            </div>
+            
+            <div class="precio_item">
+                <?php echo $row->email; ?> 
+            </div>
+                <?php echo $row->direccion; ?>
+            <div class="datos_item">
+                <a href="#" class="tipo"><?php echo $row->localidad; ?></a>
+            </div>
+            <div class="datos_persona">
+                <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
+                <a href="borrar.php?id=<?php echo $row->id ?>" class="correo">Borrar</a>
+                
+            </div>
+
+        </article>
+        <?php }?>
+    <?php } ?>
+        
+
+    </section>
+
+
+
     </body>
 </html>

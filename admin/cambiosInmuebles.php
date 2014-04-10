@@ -79,11 +79,11 @@
 	  <label class="selection">
 	    <select name="tipo" id="tipo" class="selector">
 	    <?php 
-			$sql = mysql_query("SELECT * FROM TIPOS");
-			while($row = mysql_fetch_object($sql))
+			$tipos = mysql_query("SELECT * FROM TIPOS");
+			while($rop = mysql_fetch_object($tipos))
 			{
 		?>
-	    	<option value="<?php echo $row->tipo;?>"><?php echo utf8_encode($row->tipo);?></option>
+	    	<option value="<?php echo $row->tipo;?>"><?php echo utf8_encode($rop->tipo);?></option>
 	    <?php } ?>
 	    </select></label>
     </div>
@@ -94,11 +94,11 @@
     <select name="localidad" id="localidad" class="selector">
     <?php 
     	mysql_query("SET NAMES utf8");
-		$sql = mysql_query("SELECT * FROM ESTADOS");
-		while($row = mysql_fetch_object($sql))
+		$est = mysql_query("SELECT * FROM ESTADOS");
+		while($rap = mysql_fetch_object($est))
 		{
 	?>
-    	<option value="<?php echo $row->estado;?>"><?php echo $row->estado;?></option>
+    	<option value="<?php echo $rap->estado;?>"><?php echo $rap->estado;?></option>
     <?php } ?>
     </select></label>
 </div>
@@ -115,19 +115,19 @@
   
 	<div class="item">
 	  <label>Superficie del Inmueble (En metros cuadrados)</label>
-	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
+	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+" value="<?php echo $row->superficie; ?>">
   	</div>
   	<div class="item">
 	  <label>Precio del Inmueble</label><br>
-	  <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price">
+	  <input type="text" name="precio" placeholder="87,000" required size = "30" maxlength = "15" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]*[.,]?[0-9]*[.,]?[0-9]+" id="price"value="<?php echo $row->precio; ?>">
 	    <label class="etiqueta">
 	    <select name="precio" id="precio" class="selector">
 	    <?php 
-			$sql = mysql_query("SELECT * FROM UNIDADES");
-			while($row = mysql_fetch_object($sql))
+			$uni = mysql_query("SELECT * FROM UNIDADES");
+			while($unis = mysql_fetch_object($uni))
 			{
 		?>
-	    	<option value="<?php echo $row->unidad;?>"><?php echo utf8_encode($row->unidad);?></option>
+	    	<option value="<?php echo $row->unidad;?>"><?php echo utf8_encode($unis->unidad);?></option>
 	    <?php } ?>
 	    </select></label>
 		<script>
@@ -139,9 +139,9 @@
 		</script>
 	</div>
   	<div class="item">
-	 	<br>
+	 	
 	    <label>Descripción del Inmueble</label><br>
-	    <textarea name="descripcion" style="width:80%; height:240px" id="descripcion" ></textarea>
+	    <textarea name="descripcion" style="width:80%; height:240px" id="descripcion" value="<?php echo $row->descripcion; ?>"></textarea>
 	        
 	 	<div id="update"></div>
 	 
@@ -318,13 +318,13 @@
       <input type="text" name="area" id="area" />
        </div>
   	<div class="item">
-      <input type="text" name="foto1" id="foto1"/>
+      <input type="text" name="foto1" id="foto1" value="<?php echo $row->foto1; ?>"/>
        </div>
   	<div class="item">
-      <input type="text" name="foto2" id="foto2" />
+      <input type="text" name="foto2" id="foto2" value="<?php echo $row->foto2; ?>"/>
        </div>
   	<div class="item">
-      <input type="text" name="foto3" id="foto3" />
+      <input type="text" name="foto3" id="foto3" value="<?php echo $row->foto3; ?>"/>
        </div>
 
   </form>

@@ -59,7 +59,7 @@
             </div>
             <div class="datos_persona">
                 <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
-                <a href="borrar.php?id=<?php echo $row->id ?>" class="correo">Borrar</a>
+                <a href="borrar.php?id=<?php echo $row->id ?>&tipo=noticia " class="correo">Borrar</a>
                 
             </div>
 
@@ -104,7 +104,7 @@
             </div>
             <div class="datos_persona">
                 <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
-                <a href="borrar.php?id=<?php echo $row->id ?>" class="correo">Borrar</a>
+                <a href="borrar.php?id=<?php echo $row->id ?>&tipo=casa" class="correo">Borrar</a>
                 
             </div>
 

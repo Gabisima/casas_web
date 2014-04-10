@@ -41,7 +41,7 @@
 		<?php include('header-admin.php'); ?>
 	<?php include('buscador-admin.php'); ?>
 	
-	<div class="contenedor">
+	<!-- <div class="contenedor"> -->
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
 	
 	<div class="item">
@@ -49,14 +49,13 @@
 	  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
 	</div>
 	
-	<div class="item">
+	
 	  <label>Email</label><br>
 	  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
-	</div>
-	<div class="item">
+	
 	  <label>Confirmar Email</label>
 	  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
-	</div>
+	
 	<div class="item">
 	  <label>Teléfono </label><label id="opcional">(Opcional)</label>
 	  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)">

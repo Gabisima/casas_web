@@ -45,6 +45,7 @@
    
 	</head>
   <body>
+    <a href="index.php">Regresar</a>
 
 <form action="altaNoticia.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
   <div class="contenedor">

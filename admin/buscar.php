@@ -15,6 +15,11 @@
         <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
         <link rel="stylesheet" href="../css/estilos.css">
         <link rel="stylesheet" href="css/admin.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <?php include('header-admin.php'); ?>

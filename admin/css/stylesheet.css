@@ -1,11 +1,10 @@
 /* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Flamenco);
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
 
 body{
   /*background-color: #00A0B1;*/
   text-align: center; 
-  font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif; 
   font-style: normal; 
   font-weight: normal; 
   font-size: 24px; 
@@ -34,12 +33,12 @@ form {
   padding: 25px;
   width:800px;
   margin: 20px auto;
-  font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif;
   box-shadow:0 0 5px rgba(0, 70, 255, .8);
 }
 
 input {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Share Tech', sans-serif;
   /*border:1px solid #ccc;
   font-size:20px;
   width:600px;
@@ -73,12 +72,12 @@ input[type=submit] {
 
 ::-moz-placeholder{
   font-style: italic;
-  font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif;
 }
 
 ::-webkit-input-placeholder{
   font-style: italic;
-  font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif;
 }
 
 input:focus{
@@ -96,7 +95,7 @@ input[type=radio]{
 
 /*"Input" classes and pseudoclasses*/
 input:not([type=radio]){
-  font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif;
   font-size:18px;
   border:1px solid #CCC;
   width:800px;
@@ -135,7 +134,7 @@ input:not([type=radio]){
 }
 
 .selector{
-    font-family: "Flamenco", 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+  font-family: 'Share Tech', sans-serif;
   font-size:18px;
   border:1px solid #CCC;
   width:800px;
@@ -189,7 +188,7 @@ select {
 label.selection {position:relative}
 label.selection:after {
     content:'<>';
-    font:11px "Consolas", monospace;
+    font:11px "Share Tech", sans-serif;
     color:#292929;
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
@@ -214,7 +213,7 @@ label.selection:before {
 label.etiqueta {position:relative}
 label.etiqueta:after {
     content:'<>';
-    font:11px "Consolas", monospace;
+    font:11px "Share Tech", sans-serif;
     color:#292929;
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
@@ -250,7 +249,7 @@ label.etiqueta:before {
 }
 
 #price{
-  font-family: "Flamenco", Helvetica, Arial, sans-serif;
+  font-family: 'Share Tech', sans-serif;
   border:1px solid #ccc;
   font-size:20px;
   width:700px;
@@ -262,7 +261,7 @@ label.etiqueta:before {
 }
 
 #opcional{
-	color: #CACACA; /*LOL*/
+	color: #CACACA; /*LOL <-mensaje subliminal de "se vana c*gar con nuestra página xD"*/
 }
 
 #area{

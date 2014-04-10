@@ -230,7 +230,7 @@ if(isset($_POST['enviar'])){
   echo $foto3  = $_POST['foto3'];
   echo $video;
 	//echo $video  = $_POST['video'];
-
+  mysql_query("SET NAMES utf8");
 	mysql_query("INSERT INTO noticias VALUES('$id', '$autor', '$email', '$titulo', '$fecha', '$noticia', '$foto1', '$foto2', '$foto3', '$video')");
 ?>
 <?php } ?>

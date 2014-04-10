@@ -67,11 +67,12 @@
   <label class="selection">
     <select name="localidad" id="localidad" class="selector">
     <?php 
+    	mysql_query("SET NAMES utf8");
 		$sql = mysql_query("SELECT * FROM ESTADOS");
 		while($row = mysql_fetch_object($sql))
 		{
 	?>
-    	<option value="<?php echo $row->estado;?>"><?php echo utf8_encode($row->estado);?></option>
+    	<option value="<?php echo $row->estado;?>"><?php echo $row->estado;?></option>
     <?php } ?>
     </select></label>
 
@@ -304,7 +305,8 @@ if(isset($_POST['enviar'])){
 	echo $foto1  = $_POST['foto1'];
 	echo $foto2  = $_POST['foto2'];
 	echo $foto3  = $_POST['foto3'];
-
+	
+	mysql_query("SET NAMES utf8");
 	mysql_query("INSERT INTO inmuebles VALUES('$id', '$nombre', '$email', '$telefono', '$titulo', '$tipo', '$localidad', '$direccion', '$superficie', '$precio', '$unidad', '$descripcion','$foto1', '$foto2', '$foto3')");
 ?>
 <p>Datos Insertados</p>

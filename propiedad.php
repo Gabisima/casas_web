@@ -86,23 +86,23 @@
 				<?php echo $row->telefono;?>
 			</div>
 			<h2 class="titulo_descripcion">
-				<?php echo $row->titulo;?>
+				<?php echo utf8_encode ($row->titulo);?>
 			</h2>
 			
 			<div class="contenido_descripcion">
-				<?php echo $row->descripcion;?>
+				<?php echo utf8_encode ($row->descripcion);?>
 			</div>
 			<div class="caracteristicas">
-				<p class="localidad">Localidad: <?php echo $row->localidad;?></p>
-				<p class="superficie">Superficie: <?php echo $row->superficie;?> m2</p>
-				<p class="direccion">Dirección: <?php echo $row->direccion;?></p>
+				<p class="localidad">Localidad: <?php echo utf8_encode ($row->localidad);?></p>
+				<p class="superficie">Superficie: <?php  echo utf8_encode($row->superficie);?> m2</p>
+				<p class="direccion">Dirección: <?php echo utf8_encode ($row->direccion);?></p>
 			</div>
 			<div class="descripcion_precio">
-				$<?php echo $row->precio;?> <?php echo $row->unidad;?>
+				$<?php echo utf8_encode ($row->precio);?> <?php echo $row->unidad;?>
 			</div>
 			
 			<div class="descripcion_tipo">
-				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+				<a href="#" class="tipo"><?php echo utf8_encode ($row->tipo);?></a>
 			</div>
 			<div class="mapa">
 				<iframe
@@ -113,8 +113,8 @@
 			</iframe>
 			</div>
 			<div class="datos_persona">
-				<a href="#" class="nombre"><?php echo $row->nombre;?></a>
-				<a href="#" class="correo"><?php echo $row->email;?></a>
+				<a href="#" class="nombre"><?php echo utf8_encode ($row->nombre);?></a>
+				<a href="#" class="correo"><?php echo utf8_encode ($row->email);?></a>
 				
 			</div>
 		</div>
@@ -137,24 +137,24 @@
 		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" /></a>
+				<a href="propiedad.php?id=<?php echo utf8_encode ($row->id);?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" /></a>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="propiedad.php?id=<?php echo $row->id;?>">
-					<?php echo $row->titulo;?>
+				<a href="propiedad.php?id=<?php echo utf8_encode ($row->id);?>">
+					<?php echo utf8_encode ($row->titulo);?>
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				<?php echo $row->localidad;?>
+				<?php echo utf8_encode ($row->localidad);?>
 			</div>
 			
 			<div class="precio_item">
-				$<?php echo $row->precio;?> <?php echo $row->unidad;?>
+				$<?php echo utf8_encode ($row->precio);?> <?php echo utf8_encode ($row->unidad);?>
 			</div>
 
 			<div class="datos_item">
-				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+				<a href="#" class="tipo"><?php echo utf8_encode ($row->tipo);?></a>
 			</div>
 
 		</article>

@@ -47,20 +47,20 @@
             </figure>
             <h2 class="titulo_item">
                 <a href="../noticia.php?id=<?php echo $row->id;?>">
-                    <?php echo $row->titulo;?>
+                    <?php echo utf8_encode($row->titulo);?>
                 </a>
             </h2>
 
             <div class="estado_item">
-                <?php echo $row->autor; ?>
+                <?php echo utf8_encode($row->autor); ?>
             </div>
             
             <div class="precio_item">
-                <?php echo $row->email; ?> 
+                <?php echo utf8_encode($row->email); ?> 
             </div>
-                <?php echo $row->video; ?>
+                <?php echo utf8_encode($row->video); ?>
             <div class="datos_item">
-                <a href="#" class="tipo"><?php echo $row->fecha; ?></a>
+                <a href="#" class="tipo"><?php echo utf8_encode ($row->fecha); ?></a>
             </div>
             <div class="datos_persona">
                 <a href ="cambiosNoticias.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>
@@ -92,20 +92,20 @@
             </figure>
             <h2 class="titulo_item">
                 <a href="../propiedad.php?id=<?php echo $row->id;?>">
-                    <?php echo $row->titulo;?>
+                    <?php echo utf8_encode ($row->titulo);?>
                 </a>
             </h2>
 
             <div class="estado_item">
-                $<?php echo $row->precio; ?> <?php echo $row->unidad; ?>
+                $<?php echo utf8_encode($row->precio); ?> <?php echo utf8_encode ($row->unidad); ?>
             </div>
             
             <div class="precio_item">
-                <?php echo $row->email; ?> 
+                <?php echo utf8_encode ($row->email); ?> 
             </div>
-                <?php echo $row->direccion; ?>
+                <?php echo utf8_encode($row->direccion); ?>
             <div class="datos_item">
-                <a href="#" class="tipo"><?php echo $row->localidad; ?></a>
+                <a href="#" class="tipo"><?php echo utf8_encode($row->localidad); ?></a>
             </div>
             <div class="datos_persona">
                 <a href ="cambiosInmuebles.php?&id=<?php echo $row->id; ?>" class="nombre">Modificar</a>

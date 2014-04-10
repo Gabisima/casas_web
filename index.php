@@ -78,8 +78,8 @@
 	  	$sql = @mysql_query("SELECT * FROM inmuebles order by id desc");
 		while ($row = mysql_fetch_object($sql))
 		{ ?>
-			<?php if ($i<=6) { ?>
-          
+			<?php if ($i<=6) { 
+          		mysql_query("SET NAMES utf8");?>
 	  			<div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto1;?>" alt=""></a></div>
 	  		<?php } ?>	
 	
@@ -102,6 +102,7 @@
 		?>
 		<article class="item">
 			<figure class="imagen_item">
+			<?php mysql_query("SET NAMES utf8");?>
 				<a href="propiedad.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto1;?>" /></a>
 			</figure>
 			<h2 class="titulo_item">

@@ -36,20 +36,20 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="propiedad.php?id=<?php echo $row->id;?>">
-					<?php echo $row->titulo;?>
+					<?php echo utf8_encode($row->titulo);?>
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				<?php echo $row->localidad;?>
+				<?php echo utf8_encode($row->localidad);?>
 			</div>
 			
 			<div class="precio_item">
-				$ <?php echo $row->precio;?> MXN
+				$ <?php echo utf8_encode($row->precio);?><?php echo utf8_encode($row->unidad);?>
 			</div>
 
 			<div class="datos_item">
-				<a href="#" class="tipo"><?php echo $row->tipo;?></a>
+				<a href="#" class="tipo"><?php echo utf8_encode($row->tipo);?></a>
 			</div>
 
 		</article> 		

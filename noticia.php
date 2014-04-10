@@ -72,7 +72,7 @@
 	?>
 	<!-- start slider -->
 	<div id="owl-demo">
-          
+      <?php mysql_query("SET NAMES utf8");?>
 	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto1;?>" alt=""></a></div>
 	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto2;?>" alt=""></a></div>
 	  <div class="item"><a href="noticia.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto3;?>" alt=""></a></div>
@@ -84,14 +84,15 @@
 	<div id="contenido">
 		<div class="descripcion">
 			<div class="caracteristicas">
-				<?php echo $row->fecha;?>
+			<?php mysql_query("SET NAMES utf8");?>
+				<?php echo utf8_encode ($row->fecha);?>
 			</div>
 			<h2 class="titulo_descripcion">
-				<?php echo $row->titulo;?>
+				<?php echo utf8_encode ($row->titulo);?>
 			</h2>
 			
 			<div class="contenido_descripcion">
-				<?php echo $row->noticia;?>
+				<?php  echo utf8_encode ($row->noticia);?>
 			</div>
 			<iframe title="YouTube video player" class="youtube-player" type="text/html" 
 				width="100%" height="320" src="//www.youtube.com/embed/<?php echo $row->video;?>" frameborder="0" allowfullscreen>

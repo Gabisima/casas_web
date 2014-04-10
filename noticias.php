@@ -32,16 +32,17 @@
 		?>
 		<article class="item">
 			<figure class="imagen_item">
+			 <?php mysql_query("SET NAMES utf8"); ?>
 				<a href="noticia.php?id=<?php echo $row->id;?>"> <img src="admin/uploads/<?php echo $row->foto1; ?>"></a>
 			</figure>
 			<h2 class="titulo_item">
 				<a href="noticia.php?id=<?php echo $row->id;?>"> 
-					<?php echo $row->titulo;?>
+					<?php echo utf8_encode($row->titulo);?>
 				</a>
 			</h2>
 
 			<div class="estado_item">
-				<?php echo $row->fecha;?>
+				<?php echo  utf8_encode($row->fecha);?>
 			</div>
 
 		</article> 		

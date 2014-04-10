@@ -16,7 +16,7 @@
 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
-		<title>Dynasty | Publicar</title>
+		<title>Nuevo Inmueble | Terraza</title>
         
         <!-- Change Div Function -->
 		<script>

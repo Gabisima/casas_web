@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin | Terraza</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/estilos.css">
 	<link rel="stylesheet" href="css/admin.css">

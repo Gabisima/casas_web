@@ -3,6 +3,7 @@
 <head>
 	<?php $i=1; include('conexion.php'); ?>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	<title>Propiedad | Terraza</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">

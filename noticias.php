@@ -7,6 +7,7 @@
 	<head>
  		<meta charset="utf-8">
  		<meta name="description" content="El hogar de los inmuebles">
+ 		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
  		<title>Noticias | Terraza</title>
  		<link rel="stylesheet" href="css/normalize.css">
  		<link rel="stylesheet" href="css/estilos.css">
@@ -46,10 +47,7 @@
 
 		</article> 		
 <?php 	} ?>
-<footer>
-		<p>
-			<strong>Pulse 2014</strong>
-		</p>
-</footer>
+	</section>
+	<?php include('footer.php'); ?>
 </body>
 </html>

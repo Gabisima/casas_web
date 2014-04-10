@@ -48,9 +48,9 @@
 	</head>
 	<body>
 		
-	
 	<div class="contenedor">
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
+	<a href="index.php">Regresar</a>
 	
 	<div class="item">
 	  <label>Nombre Completo</label>

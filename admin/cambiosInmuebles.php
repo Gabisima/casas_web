@@ -210,7 +210,7 @@
     	maxfilesize: 1,
 		url: 'post_file.php',
 		
-		uploadFinished:function(i,file,response){
+		uploadFinished:function(i,file,response{)
 			$.data(file).addClass('done');
 			// response is the JSON object that post_file.php returns
 		},

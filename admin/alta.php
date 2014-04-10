@@ -5,9 +5,10 @@
 		<link rel="stylesheet" href="../css/normalize.css">
 		<link rel="stylesheet" href="../css/estilos.css">
 		<link rel="stylesheet" href="css/admin.css">
+</head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
-		<title>Nuevo Inmueble | Terraza</title>
+		<title>Dynasty | Publicar</title>
         
         <!-- Change Div Function -->
 		<script>
@@ -80,6 +81,7 @@
     </div>
   	<div class="item">
     
+
       <label>Localidad del Inmueble</label><br>
   <label class="selection">
     <select name="localidad" id="localidad" class="selector">
@@ -94,14 +96,16 @@
     </select></label>
 
   <label>Dirección del Inmueble</label>
-        <iframe height="400px" width="95%" frameBorder="0" scrolling="no"
+        <iframe height="400px" width="100%" frameBorder="0" scrolling="no"
         src="maps.php" id="direccion" name="direccion">
     </iframe>
 
     <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
       <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
 
-	<div class="item">
+	  
+  	<div class="item">
+
 	  <label>Superficie del Inmueble (En metros cuadrados)</label>
 	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
   	</div>

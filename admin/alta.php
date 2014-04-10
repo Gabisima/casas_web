@@ -5,9 +5,10 @@
 		<link rel="stylesheet" href="../css/normalize.css">
 		<link rel="stylesheet" href="../css/estilos.css">
 		<link rel="stylesheet" href="css/admin.css">
+</head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8" />
-		<title>Nuevo Inmueble | Terraza</title>
+		<title>Dynasty | Publicar</title>
         
         <!-- Change Div Function -->
 		<script>
@@ -41,7 +42,7 @@
 		<?php include('header-admin.php'); ?>
 	<?php include('buscador-admin.php'); ?>
 	
-	<!-- <div class="contenedor"> -->
+	<div class="contenedor">
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
 	
 	<div class="item">
@@ -49,13 +50,14 @@
 	  <input type="text" id="nombre" name="nombre" placeholder="Mario García Navarro" required size = "30" maxlength = "100" title="Usa tu nombre real y completo">
 	</div>
 	
-	
+	<div class="item">
 	  <label>Email</label><br>
 	  <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
-	
+	</div>
+	<div class="item">
 	  <label>Confirmar Email</label>
 	  <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
-	
+	</div>
 	<div class="item">
 	  <label>Teléfono </label><label id="opcional">(Opcional)</label>
 	  <input  id="telefono" type="text" name="telefono" placeholder="(55)56-08-60-99" size = "30" maxlength = "70" oninput="changeID(this)">
@@ -79,6 +81,7 @@
     </div>
   	<div class="item">
     
+<<<<<<< HEAD
       <label>Localidad del Inmueble</label><br>
   <label class="selection">
     <select name="localidad" id="localidad" class="selector">
@@ -93,14 +96,18 @@
     </select></label>
 
   <label>Dirección del Inmueble</label>
-        <iframe height="400px" width="95%" frameBorder="0" scrolling="no"
+        <iframe height="400px" width="100%" frameBorder="0" scrolling="no"
         src="maps.php" id="direccion" name="direccion">
     </iframe>
 
     <label id="opcional">Porfavor confirma tu dirección copiando el contenido que aparece en el mapa.</label>
       <input type="text" id="direc" name="direc" placeholder="Avenida de los Poetas, Álvaro Obregón, Ciudad de México, México" required size = "30" maxlength = "100" >
+=======
+>>>>>>> 38c2cf40a1fdfd606485ceaa818f88b76a1a525f
 
-	<div class="item">
+	  
+  	<div class="item">
+
 	  <label>Superficie del Inmueble (En metros cuadrados)</label>
 	  <input type="text" name="superficie" id="superficie" placeholder="1200" required size = "30" maxlength = "10" title="El campo debe contener únicamente números" pattern="[0-9]*[.,]?[0-9]+">
   	</div>

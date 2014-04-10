@@ -12,7 +12,7 @@
 	<meta name="description" content="El hogar de los inmuebles">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" >
 	
-	<title>Pulse | Inmuebles</title>
+	<title>Tú Terraza...</title>
 	<!--start estilos generales -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">

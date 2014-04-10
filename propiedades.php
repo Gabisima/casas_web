@@ -7,7 +7,7 @@
 	<head>
  		<meta charset="utf-8">
  		<meta name="description" content="El hogar de los inmuebles">
- 		<title>Pulse | Inmuebles</title>
+ 		<title>Propiedades | Terraza</title>
  		<link rel="stylesheet" href="css/normalize.css">
  		<link rel="stylesheet" href="css/estilos.css">
  		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>

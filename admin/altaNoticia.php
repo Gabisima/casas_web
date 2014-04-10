@@ -41,12 +41,13 @@
 		</script>
 
     <!-- General CSS File-->
-     <link rel="stylesheet" href="css/stylesheet.css?v=2"> 
+    <!-- <link rel="stylesheet" href="css/stylesheet.css?v=2"> -->
    
 	</head>
   <body>
-    <a href="index.php">Regresar</a>
 
+    <?php include('header-admin.php'); ?>
+    
 <form action="altaNoticia.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >
   <div class="contenedor">
   <div class="item">
@@ -57,6 +58,10 @@
   <label>Email</label>
   <input type = "text" id="email" name = "email" size = "30" maxlength = "100" required placeholder="mail@ejemplo.com" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" title="mail@ejemplo.topleveldomain">
 </div>
+<div class="item">
+    <label>Confirmar Email</label>
+    <input type = "text" name = "confirmaremail" size = "30" maxlength = "100" pattern=".{1,50}[@]{1}.{1,48}[.]{1}.{1,47}" required oninput="check(this)">
+  </div>
  
   <div class="item">
   <label>Título de la Noticia</label>

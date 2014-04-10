@@ -47,6 +47,7 @@
    
 	</head>
 	<body>
+		<?php include('header-admin.php'); ?>
 		
 	<div class="contenedor">
 <form action="alta.php" method="post" enctype="multipart/form-data" name="formulario"  encccept-charset="UTF-8" >

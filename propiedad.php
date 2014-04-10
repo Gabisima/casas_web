@@ -72,9 +72,9 @@
 	<!-- start slider -->
 	<div id="owl-demo">
           
-	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" alt=""></a></div>
-	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto2;?>" alt=""></a></div>
-	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="images/inmuebles/<?php echo $row->foto3;?>" alt=""></a></div>
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto1;?>" alt=""></a></div>
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto2;?>" alt=""></a></div>
+	  <div class="item"><a href="propiedad.php?id=<?php echo $row->id;?>"><img src="admin/uploads/<?php echo $row->foto3;?>" alt=""></a></div>
 
 	</div>
 	<!-- end slider -->
@@ -137,7 +137,7 @@
 		?>
 		<article class="item">
 			<figure class="imagen_item">
-				<a href="propiedad.php?id=<?php echo utf8_encode ($row->id);?>"><img src="images/inmuebles/<?php echo $row->foto1;?>" /></a>
+				<a href="propiedad.php?id=<?php echo utf8_encode ($row->id);?>"><img src="admin/uploads/<?php echo $row->foto1;?>" /></a>
 			</figure>
 			<h2 class="titulo_item">
 				<a href="propiedad.php?id=<?php echo utf8_encode ($row->id);?>">

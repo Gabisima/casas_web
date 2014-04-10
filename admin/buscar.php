@@ -38,10 +38,10 @@
         ?>
         <article class="item">
             <figure class="imagen_item">
-                <a href="propiedad.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
+                <a href="../noticia.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
             </figure>
             <h2 class="titulo_item">
-                <a href="propiedad.php?id=<?php echo $row->id;?>">
+                <a href="../noticia.php?id=<?php echo $row->id;?>">
                     <?php echo $row->titulo;?>
                 </a>
             </h2>
@@ -83,10 +83,10 @@
         ?>
         <article class="item">
             <figure class="imagen_item">
-                <a href="propiedad.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
+                <a href="../propiedad.php?id=<?php echo $row->id;?>"><img src="uploads/<?php echo $row->foto1; ?>" /></a>
             </figure>
             <h2 class="titulo_item">
-                <a href="propiedad.php?id=<?php echo $row->id;?>">
+                <a href="../propiedad.php?id=<?php echo $row->id;?>">
                     <?php echo $row->titulo;?>
                 </a>
             </h2>

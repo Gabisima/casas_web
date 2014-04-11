@@ -1,0 +1,169 @@
+label{
+	margin: 0;
+	display: block;
+	text-align: center;
+}
+
+#consulta{
+
+	margin: 1em;
+}
+
+#consulta .item{
+
+	
+	background: white;
+	border-bottom: 3px solid #662C1E;
+	margin-bottom: 3em;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+	/*overflow: hidden;*/
+}
+#consulta .item .datos_item{
+	
+	text-align: right;
+
+}
+#consulta .item .datos_item .tipo{
+	
+	background: #885015;
+	color: white;
+	display: inline-block;
+	margin: 0 .3em .1em 0;
+	padding: 0.5em;
+	text-decoration: none;
+}
+#consulta .item .estado_item{
+	
+	color: #aaa;
+}
+#consulta .item .imagen_item{
+
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+#consulta .item .imagen_item img{
+	margin: 0.2em 0 0 0.2em;
+	width: 96px;
+	height: 125px;
+}
+
+#consulta .item .titulo_item{
+	
+	font-size: 1.2em;
+}
+
+#consulta .item .titulo_item a{
+	
+	color: #444;
+	text-decoration: none;
+}
+
+#consulta .item .datos_persona{
+
+	background: white;
+	border-radius: 0 0 0.5em 0.5em;
+	left: 3%;
+	margin-top: 0.5em;  
+	padding: 0.5em 1em;
+	position: absolute;
+	right: 3%;
+	/*top: 100%;*/
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px;
+}
+
+#consulta .item .datos_persona .nombre{
+	float: left;
+	text-decoration: none;
+	color: #000;
+}
+#consulta .item .datos_persona .correo{
+	float: right;
+	color: #000;
+	text-decoration: none;
+}
+#area{
+
+	display: none;
+}
+
+#foto1{
+
+	display: none;
+}
+
+#foto2{
+
+	display: none;
+}
+
+#foto3{
+
+	display: none;
+}
+
+
+.contenedor{
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+.item{
+
+	background: #EADECE;
+	display: block;
+	text-align: center;
+	margin: 0.7em 0.4em 0.3em 0.4em;
+	border-radius: 0.3em;
+	box-shadow: rgba(0,0,0,0.5) 5px 2px 10px; 
+	padding: 0 0 0.3em 0;
+
+}
+
+.nav_admin{
+
+	margin: 1em 0 0 0;
+	
+	
+}
+.nav_admin ul{
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.nav_admin ul li{
+
+	display: inline-block;
+	margin: 0.7em 0.5em 0 0;
+}
+
+.nav_admin ul li .inmuebles{
+	
+	color: #1E1E1E;
+	display: block;
+	padding: 0.3em 2em 0.2em 2em;
+	text-decoration: none;
+	font-size: 2em;
+	box-shadow: rgba(0,0,0,0.3) 5px 5px 5px;
+	background: #D6CCBD;
+	border-radius: 0.5em;
+}
+.nav_admin ul li .noticias {
+	
+	color: #1E1E1E;
+	display: block;
+	padding: 0.3em 2em 0.2em 2em;
+	box-shadow: rgba(0,0,0,0.3) 5px 5px 5px;
+	text-decoration: none;
+	/*text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;*/
+	font-size: 2em;
+	background: #D6CCBD;
+	border-radius: 0.5em;
+}
+
+
+
